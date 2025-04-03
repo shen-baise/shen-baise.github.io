@@ -1,15 +1,15 @@
 /* 自定义鼠标光标 */
-body, html {
-  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/default.cur'), auto !important;
+body {
+  cursor: url('https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/default.cur'), auto !important;
 }
 
-a, button, input[type="submit"], select {
-  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/pointer.cur'), pointer !important;
+a, button, input[type="submit"], select, #nav a.site-page {
+  cursor: url('https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/pointer.cur'), pointer !important;
 }
 
 /* 其他鼠标状态 */
 input[type="text"], textarea {
-  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/text.cur'), text !important;
+  cursor: url('https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/text.cur'), text !important;
 }
 
 .post-content a {
@@ -46,19 +46,19 @@ a:hover, .post-meta__tags a:hover, .pagination a:hover, button:hover {
 }
 
 /* 隐藏顶部菜单栏中的英文标签 */
-.nav-item > a[href="/"]:not([data-text="首页"]),
-.nav-item > a[href="/archives/"]:not([data-text="归档"]),
-.nav-item > a[href="/tags/"]:not([data-text="标签"]),
-.nav-item > a[href="/categories/"]:not([data-text="分类"]),
-.nav-item > a[href="/link/"]:not([data-text="友链"]),
-.nav-item > a[href="/about/"]:not([data-text="关于"]) {
+#nav:lang(zh-CN) a[href="/"]:not([class="nav-site-title"]) {
+  display: none !important;
+}
+
+/* 隐藏英文菜单 */
+#nav #menus .menus_items .menus_item:nth-child(-n+6) {
   display: none !important;
 }
 
 /* 优化赞赏模块 */
 .reward-container {
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 12px;
   background-color: rgba(73, 177, 245, 0.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -88,15 +88,26 @@ a:hover, .post-meta__tags a:hover, .pagination a:hover, button:hover {
   justify-content: center;
 }
 
+.reward-item {
+  padding: 0 10px;
+}
+
 .reward-img {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0.5rem !important;
   transition: all 0.3s ease;
+  max-width: 130px;
 }
 
 .reward-img:hover {
   transform: scale(1.05);
+}
+
+.post-qr-code-desc {
+  font-weight: bold;
+  margin-top: 5px;
+  color: #49b1f5;
 }
 
 /* 欢迎弹窗 */
