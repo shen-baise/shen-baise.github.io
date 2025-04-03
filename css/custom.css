@@ -7,6 +7,56 @@ a, button, input[type="submit"], select {
   cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/link.cur), pointer !important;
 }
 
+/* 鼠标悬停效果 */
+a:hover, .post-meta__tags a:hover, .pagination a:hover, button:hover {
+  transition: all 0.3s ease-in-out;
+  filter: brightness(1.1);
+}
+
+/* 优化赞赏模块 */
+.reward-container {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(73, 177, 245, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.reward-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.reward-button {
+  border-radius: 8px !important;
+  padding: 0.5rem 1.5rem !important;
+  background-color: #49b1f5 !important;
+  color: white !important;
+  font-weight: bold !important;
+  transition: all 0.3s ease !important;
+}
+
+.reward-button:hover {
+  background-color: #3a8fc7 !important;
+  transform: scale(1.05);
+}
+
+.reward-all {
+  justify-content: center;
+}
+
+.reward-img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem !important;
+  transition: all 0.3s ease;
+}
+
+.reward-img:hover {
+  transform: scale(1.05);
+}
+
 /* 欢迎弹窗 */
 #welcome-popup {
   position: fixed;
