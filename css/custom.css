@@ -1,10 +1,10 @@
 /* 自定义鼠标光标 */
 body, html {
-  cursor: url(https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/ayuda.cur), auto !important;
+  cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/normal.cur), auto !important;
 }
 
 a, button, input[type="submit"], select {
-  cursor: url(https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/linkc.cur), pointer !important;
+  cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/link.cur), pointer !important;
 }
 
 /* 欢迎弹窗 */

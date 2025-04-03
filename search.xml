@@ -8,7 +8,7 @@
       <link href="/2025/04/04/%E6%89%AC%E5%B8%86%EF%BC%8C%E8%B5%B7%E8%88%AA/"/>
       <url>/2025/04/04/%E6%89%AC%E5%B8%86%EF%BC%8C%E8%B5%B7%E8%88%AA/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>清明假期终于来了，这段时间太压抑无聊了，终于有3天半的假放了，虽然下周一就得密码学期中考试（密码的），但能多歇息一会儿就已经是万幸了。玩了一整个下午的阿瓦隆，梅林无败绩，我的梅林还是太C了，把他们骗得一愣一愣的。晚上又无聊起来不知道干啥，临时起意就准备搭个博客，搭博客还是太吃操作了，这个页面美化真是太难了，要搞吐了全是报错，不过起码有了个乞丐版骨架，之后有时间闲的蛋疼再来优化吧，以我三分钟热度的性子，下一篇博客不只是何时。临时起了个名叫深白色的赛博产房，灵感来源于陶老大的B站名字“陶喆的音乐产房”。我有个初步的想法，每篇文章都得有BGM（如果能做到的话），然后分享一两首歌。今天临时搭的博客，菜鸟深白色啥都不会，只能止步于此了，今天就先安可一首二哥的《此刻，你心里想起谁》吧。这段时间太down了，只想快进到下下周去看二哥的演唱会，去我的几小时的乌托邦去逃避，与这个糟糕的world隔绝几个钟。现在时间不早了，之后有时间再分享点别的吧。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>清明假期终于来了，这段时间太压抑无聊了，终于有3天半的假放了，虽然下周一就得密码学期中考试（密码的），但能多歇息一会儿就已经是万幸了。玩了一整个下午的阿瓦隆，梅林无败绩，我的梅林还是太C了，把他们骗得一愣一愣的。晚上又无聊起来不知道干啥，临时起意就准备搭个博客，搭博客还是太吃操作了，这个页面美化真是太难了，要搞吐了全是报错，不过起码有了个乞丐版骨架，之后有时间闲的蛋疼再来优化吧，以我三分钟热度的性子，下一篇博客不只是何时。临时起了个名叫深白色的赛博产房，灵感来源于陶老大的B站名字”陶喆的音乐产房”。我有个初步的想法，每篇文章都得有BGM（如果能做到的话），然后分享一两首歌。今天临时搭的博客，菜鸟深白色啥都不会，只能止步于此了，今天就先安可一首二哥的《此刻，你心里想起谁》吧。这段时间太down了，只想快进到下下周去看二哥的演唱会，去我的几小时的乌托邦去逃避，与这个糟糕的world隔绝几个钟。现在时间不早了，之后有时间再分享点别的吧。</p>]]></content>
       
       
       
@@ -20,9 +20,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
@@ -64,22 +64,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[/* 自定义鼠标光标 */body, html {  cursor: url(https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/ayuda.cur), auto !important;}a, button, input[type="submit"], select {  cursor: url(https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/linkc.cur), pointer !important;}/* 欢迎弹窗 */#welcome-popup {  position: fixed;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);  background-color: rgba(255, 255, 255, 0.95);  padding: 20px;  border-radius: 10px;  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  z-index: 9999;  text-align: center;  font-size: 16px;  display: none;  max-width: 80%;  line-height: 1.6;}#welcome-popup h3 {  margin-top: 0;  color: #49b1f5;  font-size: 22px;}#welcome-popup p {  margin: 10px 0;}#welcome-close {  background-color: #49b1f5;  color: white;  border: none;  padding: 8px 15px;  border-radius: 5px;  cursor: pointer;  margin-top: 15px;  transition: background-color 0.3s;}#welcome-close:hover {  background-color: #37a0e4;} ]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[/* 自定义鼠标光标 */body, html {  cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/normal.cur), auto !important;}a, button, input[type="submit"], select {  cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/link.cur), pointer !important;}/* 欢迎弹窗 */#welcome-popup {  position: fixed;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);  background-color: rgba(255, 255, 255, 0.95);  padding: 20px;  border-radius: 10px;  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  z-index: 9999;  text-align: center;  font-size: 16px;  display: none;  max-width: 80%;  line-height: 1.6;}#welcome-popup h3 {  margin-top: 0;  color: #49b1f5;  font-size: 22px;}#welcome-popup p {  margin: 10px 0;}#welcome-close {  background-color: #49b1f5;  color: white;  border: none;  padding: 8px 15px;  border-radius: 5px;  cursor: pointer;  margin-top: 15px;  transition: background-color 0.3s;}#welcome-close:hover {  background-color: #37a0e4;} ]]></content>
       
     </entry>
     
