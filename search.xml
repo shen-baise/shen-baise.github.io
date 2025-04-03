@@ -32,17 +32,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 自定义鼠标光标 */body, html {  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), auto !important;}a, button, input[type="submit"], select, .post-meta__tags {  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), pointer !important;}/* 鼠标悬停效果 */a:hover, .post-meta__tags a:hover, .pagination a:hover, button:hover {  transition: all 0.3s ease-in-out;  filter: brightness(1.1);}/* 优化赞赏模块 */.reward-container {  margin-top: 2rem;  padding: 1rem;  border-radius: 12px;  background-color: rgba(73, 177, 245, 0.1);  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  transition: all 0.3s ease;}.reward-container:hover {  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  transform: translateY(-2px);}.reward-button {  border-radius: 8px !important;  padding: 0.5rem 1.5rem !important;  background-color: #49b1f5 !important;  color: white !important;  font-weight: bold !important;  transition: all 0.3s ease !important;}.reward-button:hover {  background-color: #3a8fc7 !important;  transform: scale(1.05);}.reward-all {  justify-content: center;}.reward-img {  border-radius: 8px;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  margin: 0.5rem !important;  transition: all 0.3s ease;}.reward-img:hover {  transform: scale(1.05);}/* 欢迎弹窗 */#welcome-popup {  position: fixed;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);  background-color: rgba(255, 255, 255, 0.95);  padding: 20px;  border-radius: 10px;  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  z-index: 9999;  text-align: center;  font-size: 16px;  display: none;  max-width: 80%;  line-height: 1.6;}#welcome-popup h3 {  margin-top: 0;  color: #49b1f5;  font-size: 22px;}#welcome-popup p {  margin: 10px 0;}#welcome-close {  background-color: #49b1f5;  color: white;  border: none;  padding: 8px 15px;  border-radius: 5px;  cursor: pointer;  margin-top: 15px;  transition: background-color 0.3s;}#welcome-close:hover {  background-color: #37a0e4;} ]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/js/welcome.js"/>
       <url>/js/welcome.js</url>
       
@@ -53,11 +42,33 @@
     
     
     <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 自定义鼠标光标 */body, html {  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/default.cur'), auto !important;}a, button, input[type="submit"], select {  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/pointer.cur'), pointer !important;}/* 其他鼠标状态 */input[type="text"], textarea {  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/text.cur'), text !important;}.post-content a {  cursor: url('https://cdn.jsdelivr.net/gh/omaekumiko/cursors@latest/link.cur'), pointer !important;}.copy-button {  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/copy.cur'), copy !important;}#rightside > div > button, #rightside > div > a {  cursor: url('/img/pointer.cur'), pointer !important;}/* 当用户可以帮助时的指针样式 */.helpable {  cursor: url('/img/help.cur'), help !important;}/* 当用户可以移动元素时的指针样式 */.movable {  cursor: url('/img/move.cur'), move !important;}/* 表示禁止状态的指针样式 */.disable {  cursor: url('/img/disable.cur'), not-allowed !important;}/* 鼠标悬停效果 */a:hover, .post-meta__tags a:hover, .pagination a:hover, button:hover {  transition: all 0.3s ease-in-out;  filter: brightness(1.1);}/* 隐藏顶部菜单栏中的英文标签 */.nav-item > a[href="/"]:not([data-text="首页"]),.nav-item > a[href="/archives/"]:not([data-text="归档"]),.nav-item > a[href="/tags/"]:not([data-text="标签"]),.nav-item > a[href="/categories/"]:not([data-text="分类"]),.nav-item > a[href="/link/"]:not([data-text="友链"]),.nav-item > a[href="/about/"]:not([data-text="关于"]) {  display: none !important;}/* 优化赞赏模块 */.reward-container {  margin-top: 2rem;  padding: 1rem;  border-radius: 12px;  background-color: rgba(73, 177, 245, 0.1);  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  transition: all 0.3s ease;}.reward-container:hover {  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  transform: translateY(-2px);}.reward-button {  border-radius: 8px !important;  padding: 0.5rem 1.5rem !important;  background-color: #49b1f5 !important;  color: white !important;  font-weight: bold !important;  transition: all 0.3s ease !important;}.reward-button:hover {  background-color: #3a8fc7 !important;  transform: scale(1.05);}.reward-all {  justify-content: center;}.reward-img {  border-radius: 8px;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  margin: 0.5rem !important;  transition: all 0.3s ease;}.reward-img:hover {  transform: scale(1.05);}/* 欢迎弹窗 */#welcome-popup {  position: fixed;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);  background-color: rgba(255, 255, 255, 0.95);  padding: 20px;  border-radius: 10px;  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  z-index: 9999;  text-align: center;  font-size: 16px;  display: none;  max-width: 80%;  line-height: 1.6;}#welcome-popup h3 {  margin-top: 0;  color: #49b1f5;  font-size: 22px;}#welcome-popup p {  margin: 10px 0;}#welcome-close {  background-color: #49b1f5;  color: white;  border: none;  padding: 8px 15px;  border-radius: 5px;  cursor: pointer;  margin-top: 15px;  transition: background-color 0.3s;}#welcome-close:hover {  background-color: #37a0e4;} ]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>友链</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h1><p>值得推荐的网站</p><ul><li><p>name: Youtube<br>link: <a href="https://youtube.com/">https://youtube.com/</a><br>avatar: <a href="https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png">https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png</a><br>descr: 视频网站</p></li><li><p>name: 哔哩哔哩<br>link: <a href="https://bilibili.com/">https://bilibili.com/</a><br>avatar: <a href="https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png">https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png</a><br>descr: 中国年轻人的视频社区</p></li><li><p>name: GitHub<br>link: <a href="https://github.com/">https://github.com/</a><br>avatar: <a href="https://avatars.githubusercontent.com/u/9919?s=200&v=4">https://avatars.githubusercontent.com/u/9919?s=200&amp;v=4</a><br>descr: 代码托管平台</p></li></ul><h1 id="友人帐"><a href="#友人帐" class="headerlink" title="友人帐"></a>友人帐</h1><p>朋友一生一起走，那些日子不再有～</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       
     </entry>
     
@@ -67,17 +78,6 @@
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       

@@ -1,16 +1,58 @@
 /* 自定义鼠标光标 */
 body, html {
-  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), auto !important;
+  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/default.cur'), auto !important;
 }
 
-a, button, input[type="submit"], select, .post-meta__tags {
-  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), pointer !important;
+a, button, input[type="submit"], select {
+  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/pointer.cur'), pointer !important;
+}
+
+/* 其他鼠标状态 */
+input[type="text"], textarea {
+  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/text.cur'), text !important;
+}
+
+.post-content a {
+  cursor: url('https://cdn.jsdelivr.net/gh/omaekumiko/cursors@latest/link.cur'), pointer !important;
+}
+
+.copy-button {
+  cursor: url('https://cdn.jsdelivr.net/gh/azurity/file-cdn/cursor/copy.cur'), copy !important;
+}
+
+#rightside > div > button, #rightside > div > a {
+  cursor: url('/img/pointer.cur'), pointer !important;
+}
+
+/* 当用户可以帮助时的指针样式 */
+.helpable {
+  cursor: url('/img/help.cur'), help !important;
+}
+
+/* 当用户可以移动元素时的指针样式 */
+.movable {
+  cursor: url('/img/move.cur'), move !important;
+}
+
+/* 表示禁止状态的指针样式 */
+.disable {
+  cursor: url('/img/disable.cur'), not-allowed !important;
 }
 
 /* 鼠标悬停效果 */
 a:hover, .post-meta__tags a:hover, .pagination a:hover, button:hover {
   transition: all 0.3s ease-in-out;
   filter: brightness(1.1);
+}
+
+/* 隐藏顶部菜单栏中的英文标签 */
+.nav-item > a[href="/"]:not([data-text="首页"]),
+.nav-item > a[href="/archives/"]:not([data-text="归档"]),
+.nav-item > a[href="/tags/"]:not([data-text="标签"]),
+.nav-item > a[href="/categories/"]:not([data-text="分类"]),
+.nav-item > a[href="/link/"]:not([data-text="友链"]),
+.nav-item > a[href="/about/"]:not([data-text="关于"]) {
+  display: none !important;
 }
 
 /* 优化赞赏模块 */
