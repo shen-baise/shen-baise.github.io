@@ -1,0 +1,51 @@
+/* 自定义鼠标光标 */
+body, html {
+  cursor: url(https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/ayuda.cur), auto !important;
+}
+
+a, button, input[type="submit"], select {
+  cursor: url(https://cdn.jsdelivr.net/gh/conicalhat/CDN/cur/linkc.cur), pointer !important;
+}
+
+/* 欢迎弹窗 */
+#welcome-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-align: center;
+  font-size: 16px;
+  display: none;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+#welcome-popup h3 {
+  margin-top: 0;
+  color: #49b1f5;
+  font-size: 22px;
+}
+
+#welcome-popup p {
+  margin: 10px 0;
+}
+
+#welcome-close {
+  background-color: #49b1f5;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+#welcome-close:hover {
+  background-color: #37a0e4;
+} 
