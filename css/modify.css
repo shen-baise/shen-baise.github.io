@@ -1,6 +1,7 @@
 #page-header,
 #page-header:before {
-  background: transparent !important;
+  background-position: center !important;
+  background-size: cover !important;
 }
 #page-header.post-bg,
 #page-header.not-home-page {
@@ -63,4 +64,8 @@
 [data-theme='dark'] #footer-wrap,
 [data-theme='dark'] #footer-wrap a {
   color: var(--light-grey);
+}
+canvas#ribbon,
+canvas#canvasNest {
+  display: none !important;
 }
