@@ -1,132 +1,168 @@
-body {
-  background: url("/img/haer.jpg") !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-body.page.index {
-  background: url("/img/back.png") !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-#page-header {
-  background-image: url("/img/lyy.webp") !important;
-  background-position: center 40% !important;
-  background-size: 100% auto !important;
-  background-repeat: no-repeat !important;
-  height: 500px !important;
-}
-body.page.index #page-header {
-  background-image: url("/img/back.png") !important;
-  height: 100vh !important;
-  background-position: center !important;
-  background-size: cover !important;
-}
-body.page.index #site-title,
-body.page.index #site-subtitle,
-body.page.index #site-info {
-  position: relative;
-  top: 10vh;
-  text-align: center;
-}
-body.page.index header {
-  height: 100vh;
-}
-body.page.index #content-inner {
-  margin-top: 0;
-  padding-top: 2rem;
-}
-.home-page #page-header {
-  height: 100vh !important;
-}
-.scroll-down-effects {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  text-align: center;
-  cursor: pointer;
-  z-index: 100;
-}
-#page-header.post-bg,
-#page-header.not-home-page {
-  height: 280px !important;
-}
-#page-header #post-info {
-  bottom: 40px !important;
-}
-#page-header #page-site-info {
-  top: 140px !important;
-}
-@media screen and (max-width: 768px) {
-  #page-header.not-home-page {
-    height: 200px !important;
-  }
-  #page-header #post-info {
-    bottom: 10px !important;
-  }
-  #page-header #page-site-info {
-    top: 100px !important;
-  }
-}
-.top-img {
-  height: 250px;
-  margin: -50px -40px 50px;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  background-position: center center;
-  background-size: cover;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
-}
-@media screen and (max-width: 768px) {
-  .top-img {
-    height: 230px;
-    margin: -36px -14px 36px;
-  }
-}
-[data-theme='dark'] .top-img {
-  filter: brightness(0.8);
-}
+/* 页脚美化 */
 #footer:before {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
+
 [data-theme='dark'] #footer:before {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-#footer-wrap,
+
+#footer-wrap, 
 #footer-wrap a {
   color: #111;
-  -webkit-transition: unset;
-  -moz-transition: unset;
-  -o-transition: unset;
-  -ms-transition: unset;
   transition: unset;
 }
+
 [data-theme='dark'] #footer-wrap,
 [data-theme='dark'] #footer-wrap a {
   color: var(--light-grey);
 }
-canvas#ribbon,
-canvas#canvasNest {
-  display: none !important;
+
+/* 页面顶部图片 */
+.top-img {
+  height: 250px;
+  margin: -50px -40px 50px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s;
 }
-body.page.index .layout {
-  margin-top: 100vh;
-  background: #f7f9fe;
-  position: relative;
-  z-index: 10;
-  -webkit-box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
-  box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
-  border-radius: 12px 12px 0 0;
+
+@media screen and (max-width: 768px) {
+  .top-img {
+    margin: -30px -14px 30px;
+  }
 }
+
+/* 文章页H1-H6图标样式效果 */
+/* 控制风车转动速度 4s那里可以自己调节快慢 */
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  -webkit-animation: ccc 4s linear infinite;
+  animation: ccc 4s linear infinite;
+}
+
+/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */
+@-webkit-keyframes ccc {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+@keyframes ccc {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+/* 设置风车颜色 */
+#content-inner.layout h1::before,
+#article-container h1::before {
+  color: #ef50a8;
+  margin-left: -1.55rem;
+  font-size: 1.3rem;
+  margin-top: -0.23rem;
+}
+
+#content-inner.layout h2::before,
+#article-container h2::before {
+  color: #fb7061;
+  margin-left: -1.35rem;
+  font-size: 1.1rem;
+  margin-top: -0.12rem;
+}
+
+#content-inner.layout h3::before,
+#article-container h3::before {
+  color: #ffbf00;
+  margin-left: -1.22rem;
+  font-size: 0.95rem;
+  margin-top: -0.09rem;
+}
+
+#content-inner.layout h4::before,
+#article-container h4::before {
+  color: #a9e000;
+  margin-left: -1.05rem;
+  font-size: 0.8rem;
+  margin-top: -0.09rem;
+}
+
+#content-inner.layout h5::before,
+#article-container h5::before {
+  color: #57c850;
+  margin-left: -0.9rem;
+  font-size: 0.7rem;
+  margin-top: 0rem;
+}
+
+#content-inner.layout h6::before,
+#article-container h6::before {
+  color: #5ec1e0;
+  margin-left: -0.9rem;
+  font-size: 0.66rem;
+  margin-top: 0rem;
+}
+
+/* 设置风车hover动效 6s那里可以自己调节快慢*/
+#content-inner.layout h1:hover,
+#content-inner.layout h2:hover,
+#content-inner.layout h3:hover,
+#content-inner.layout h4:hover,
+#content-inner.layout h5:hover,
+#content-inner.layout h6:hover,
+#article-container h1:hover,
+#article-container h2:hover,
+#article-container h3:hover,
+#article-container h4:hover,
+#article-container h5:hover,
+#article-container h6:hover {
+  color: var(--theme-color);
+}
+
+#content-inner.layout h1:hover::before,
+#content-inner.layout h2:hover::before,
+#content-inner.layout h3:hover::before,
+#content-inner.layout h4:hover::before,
+#content-inner.layout h5:hover::before,
+#content-inner.layout h6:hover::before,
+#article-container h1:hover::before,
+#article-container h2:hover::before,
+#article-container h3:hover::before,
+#article-container h4:hover::before,
+#article-container h5:hover::before,
+#article-container h6:hover::before {
+  color: var(--theme-color);
+  -webkit-animation: ccc 6s linear infinite;
+  animation: ccc 6s linear infinite;
+}
+
+/* 确保背景图片在所有页面完全显示 */
+#page-header.not-home-page,
+#page-header.post-bg, 
+#page-header.tag-bg,
+#page-header.archive-bg,
+#page-header.category-bg,
+#page-header.messageboard-bg {
+  background: url('/img/haer.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  height: 400px !important; /* 增加高度以确保图片完全显示 */
+} 
