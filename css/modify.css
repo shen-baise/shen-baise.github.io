@@ -12,10 +12,14 @@ body.page.index {
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
-#page-header,
-#page-header:before {
+#page-header {
+  background-image: url("/img/lyy.webp") !important;
   background-position: center !important;
   background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+body.page.index #page-header {
+  background-image: url("/img/back.png") !important;
 }
 #page-header.post-bg,
 #page-header.not-home-page {
