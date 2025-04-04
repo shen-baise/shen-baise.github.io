@@ -121,4 +121,24 @@ body {
 
 #welcome-close:hover {
   background-color: #37a0e4;
+}
+
+/* 修改文章缺失图片为自定义图片 */
+.recent-post-item:not(.no-article-cover) .post-cover-img {
+  object-fit: cover;
+}
+
+.recent-post-item .post-cover-none,
+.error-img {
+  background-image: url('/img/dtcat.png') !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+}
+
+/* 修改404错误图片 */
+.error-img {
+  width: 100%;
+  height: 200px;
 } 
