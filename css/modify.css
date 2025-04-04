@@ -14,12 +14,19 @@ body.page.index {
 }
 #page-header {
   background-image: url("/img/lyy.webp") !important;
-  background-position: center !important;
-  background-size: cover !important;
+  background-position: center 40% !important;
+  background-size: 100% auto !important;
   background-repeat: no-repeat !important;
+  height: 500px !important;
 }
 body.page.index #page-header {
   background-image: url("/img/back.png") !important;
+  height: 100vh !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+.home-page #page-header {
+  height: 100vh !important;
 }
 #page-header.post-bg,
 #page-header.not-home-page {
@@ -86,4 +93,11 @@ body.page.index #page-header {
 canvas#ribbon,
 canvas#canvasNest {
   display: none !important;
+}
+.full-page.index .scroll-down-effects {
+  position: absolute;
+  bottom: 0;
+}
+.full-page.index #content-inner {
+  margin-top: 15px;
 }
