@@ -101,7 +101,7 @@ body {
 
 /* 引用中首字符 */
 #article-container blockquote::before {
-  content: """;
+  content: "\201C";
   font-family: 'Noto Serif SC', serif;
   position: absolute;
   left: 0.5em;
