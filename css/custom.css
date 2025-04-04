@@ -1,6 +1,7 @@
 /* 自定义鼠标光标 */
 body, html {
   cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/normal.cur), auto !important;
+  font-size: 16px; /* 增加基础字体大小 */
 }
 
 a, button, input[type="submit"], select {
@@ -65,6 +66,7 @@ body {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   transition: all 0.3s;
+  font-size: 1rem;
 }
 
 #aside-content .card-widget:hover {
@@ -660,7 +662,7 @@ button.toast-close-button {
 /* 文章正文样式美化 */
 .post-content {
     font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
     line-height: 2.2 !important;
     letter-spacing: 0.02em;
     color: #333;
@@ -687,19 +689,19 @@ button.toast-close-button {
 }
 
 #article-container h1 {
-    font-size: 2.2rem !important;
+    font-size: 1.8rem !important;
 }
 
 #article-container h2 {
-    font-size: 1.9rem !important;
-}
-
-#article-container h3 {
     font-size: 1.6rem !important;
 }
 
-#article-container h4 {
+#article-container h3 {
     font-size: 1.4rem !important;
+}
+
+#article-container h4 {
+    font-size: 1.2rem !important;
 }
 
 /* 链接样式 */
@@ -780,4 +782,60 @@ button.toast-close-button {
 .post-content li p,
 .post-content .gallery-group {
     text-indent: 0;
+}
+
+/* 全局字体大小调整 */
+#content-inner {
+  font-size: 1.1rem; /* 文章内容字体大小 */
+}
+
+/* 文章标题字体大小 */
+.post-title {
+  font-size: 1.8rem !important;
+}
+
+/* 文章内容字体大小 */
+.post-content {
+  font-size: 1.1rem;
+}
+
+.post-content h1 {
+  font-size: 1.8rem !important;
+}
+
+.post-content h2 {
+  font-size: 1.6rem !important;
+}
+
+.post-content h3 {
+  font-size: 1.4rem !important;
+}
+
+.post-content h4 {
+  font-size: 1.2rem !important;
+}
+
+/* 侧边栏字体大小 */
+#aside-content .card-widget {
+  font-size: 1rem;
+}
+
+/* 导航菜单字体大小 */
+#nav .site-page {
+  font-size: 1.1rem;
+}
+
+/* 文章元数据字体大小 */
+.post-meta {
+  font-size: 0.95rem !important;
+}
+
+/* 文章卡片摘要字体大小 */
+.recent-post-info .content {
+  font-size: 1rem !important;
+}
+
+/* 卡片标题字体大小 */
+.card-widget .item-headline {
+  font-size: 1.15rem !important;
 } 
