@@ -12,21 +12,40 @@ body.page.index {
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
+#nav,
+.home-page #page-header,
+.page.index #page-header {
+  background-image: url("/img/back.png") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  height: 100vh !important;
+  z-index: 90 !important;
+}
+#site-info {
+  z-index: 91 !important;
+}
+.full-page.page.index {
+  height: 100vh !important;
+  position: relative !important;
+}
+.full-page.index .scroll-down-effects {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  -webkit-transform: translateX(-50%) !important;
+  -moz-transform: translateX(-50%) !important;
+  -o-transform: translateX(-50%) !important;
+  -ms-transform: translateX(-50%) !important;
+  transform: translateX(-50%) !important;
+  z-index: 100 !important;
+}
 #page-header {
   background-image: url("/img/lyy.webp") !important;
   background-position: center 40% !important;
   background-size: 100% auto !important;
   background-repeat: no-repeat !important;
   height: 500px !important;
-}
-body.page.index #page-header {
-  background-image: url("/img/back.png") !important;
-  height: 100vh !important;
-  background-position: center !important;
-  background-size: cover !important;
-}
-.home-page #page-header {
-  height: 100vh !important;
 }
 #page-header.post-bg,
 #page-header.not-home-page {
@@ -94,10 +113,7 @@ canvas#ribbon,
 canvas#canvasNest {
   display: none !important;
 }
-.full-page.index .scroll-down-effects {
-  position: absolute;
-  bottom: 0;
-}
-.full-page.index #content-inner {
-  margin-top: 15px;
+.index #recent-posts,
+.index .pagination {
+  margin-top: 100vh !important;
 }
