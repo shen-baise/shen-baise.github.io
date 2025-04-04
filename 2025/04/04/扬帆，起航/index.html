@@ -159,12 +159,23 @@
   isToc: false,
   pageType: 'post'
 }</script><link rel="stylesheet" href="/css/modify.css"><script>
+  var GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"},"input_placeholder":"Search for Posts"},
+    translate: undefined,
+    noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+    pjax: undefined,
+    isHome: false,
+    isPost: false
+  };
+  
   var GLOBAL_CONFIG_CLOCK = {
     clock_css: "https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css",
     clock_js: "https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js",
     clock_svg: "https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.svg",
     weather_api: "auto_ip",
-    weather_key: "2f631ddb7d9c4071bded35e02e336506",
+    weather_key: "58fb7f6b7a8b4a2cb2d2fc4e1fdf0eb6", // 此密钥从和风天气官网获取
     weather_days: "3"
   }
 </script>
