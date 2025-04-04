@@ -119,37 +119,4 @@
 .recent-post-item {
   width: 100% !important;
   box-sizing: border-box !important;
-}
-
-/* 修复文章内容被裁切的问题 */
-.recent-post-item .content {
-  padding: 0 !important;
-  margin: 0.8em 0 !important;
-  width: 100% !important;
-  text-align: justify !important;
-  display: -webkit-box !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-/* 确保文章内容第一个字不被裁切 */
-.recent-post-item .article-meta-wrap {
-  margin: 8px 0 !important;
-}
-
-.recent-post-item .article-title {
-  margin: 0 0 8px 0 !important;
-  padding: 0 !important;
-  font-size: 1.4rem !important;
-  line-height: 1.4 !important;
-}
-
-/* 针对文章页的样式调整 */
-#post #article-container {
-  padding: 2rem !important;
-  margin: 0 !important;
-}
-
-#post-info {
-  padding: 2rem !important;
 } 
