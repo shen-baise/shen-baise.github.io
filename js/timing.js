@@ -18,7 +18,6 @@ setInterval(function () {
     //     + tow(minute) + '<span class="time">分钟</span>'
     //     + tow(second) + '<span class="time">秒</span>';
     var str = tow(hour) + '<span class="time">小时</span>'
-        + tow(minute) + '<span class="time">分钟</span>'
-        + tow(second) + '<span class="time">秒</span>';
+        + tow(minute) + '<span class="time">分钟</span>';
     oSpan.innerHTML = "您已浏览网页" + str;
 }, 1000) 
