@@ -1,7 +1,6 @@
 /* 自定义鼠标光标 */
 body, html {
   cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/normal.cur), auto !important;
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a, button, input[type="submit"], select {
@@ -658,108 +657,127 @@ button.toast-close-button {
   font-weight: bold;
 }
 
-/* 文章内容排版美化 */
-#article-container {
-  font-size: 1.1rem;
-  line-height: 2;
-  letter-spacing: 0.5px;
-  color: #333;
+/* 文章正文样式美化 */
+.post-content {
+    font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
+    font-size: 1.12rem !important;
+    line-height: 2.1 !important;
+    letter-spacing: 0.02em;
+    color: #333;
+    text-align: justify;
+    font-weight: 400;
 }
 
-#article-container p {
-  margin-bottom: 1.2em;
+/* 文章段落间距 */
+.post-content p {
+    margin-bottom: 1.2em;
 }
 
-#article-container h1, 
-#article-container h2, 
-#article-container h3, 
-#article-container h4, 
-#article-container h5, 
+/* 文章标题样式 */
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4,
+#article-container h5,
 #article-container h6 {
-  font-weight: 600;
-  margin: 1.5em 0 1em;
-  color: #2c3e50;
-  font-family: 'PingFang SC', 'Noto Serif SC', 'Microsoft YaHei', serif;
+    font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-weight: 600;
+    margin: 1.2em 0 0.8em 0;
+    color: #444;
 }
 
 #article-container h1 {
-  font-size: 2rem;
+    font-size: 2.2rem !important;
 }
 
 #article-container h2 {
-  font-size: 1.8rem;
+    font-size: 1.9rem !important;
 }
 
 #article-container h3 {
-  font-size: 1.6rem;
+    font-size: 1.6rem !important;
 }
 
 #article-container h4 {
-  font-size: 1.4rem;
+    font-size: 1.4rem !important;
 }
 
-#article-container a {
-  color: #3273dc;
-  word-break: break-word;
-  text-decoration: none;
-  border-bottom: 1px solid #3273dc;
-  transition: all 0.3s;
+/* 链接样式 */
+.post-content a {
+    color: #49b1f5;
+    text-decoration: none;
+    border-bottom: 1px solid #49b1f5;
+    transition: all 0.3s ease;
 }
 
-#article-container a:hover {
-  color: #ff7242;
-  border-bottom: 1px solid #ff7242;
+.post-content a:hover {
+    color: #ff7242;
+    border-bottom-color: #ff7242;
 }
 
-#article-container strong {
-  color: #273849;
-  font-weight: 600;
+/* 引用块样式 */
+.post-content blockquote {
+    border-left: 4px solid #49b1f5;
+    background-color: rgba(73, 177, 245, 0.1);
+    padding: 1em 1em 1em 2em;
+    margin: 1em 0;
+    border-radius: 0 8px 8px 0;
 }
 
-#article-container em {
-  font-style: italic;
-  color: #555;
+/* 代码块样式 */
+.post-content code {
+    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.9em;
+    background-color: rgba(73, 177, 245, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
 }
 
-#article-container ul, 
-#article-container ol {
-  padding-left: 2em;
-  margin-bottom: 1.2em;
+/* 列表样式 */
+.post-content ul, 
+.post-content ol {
+    padding-left: 1.5em;
+    margin-bottom: 1.2em;
 }
 
-#article-container ul li, 
-#article-container ol li {
-  margin-bottom: 0.5em;
-  line-height: 1.8;
+.post-content li {
+    margin-bottom: 0.6em;
 }
 
-#article-container blockquote {
-  border-left: 4px solid #49b1f5;
-  background-color: rgba(73, 177, 245, 0.1);
-  padding: 1em;
-  margin: 1em 0;
-  color: #555;
-  font-style: italic;
+/* 表格样式 */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
 }
 
-#article-container blockquote p {
-  margin: 0;
+.post-content table th,
+.post-content table td {
+    border: 1px solid #eee;
+    padding: 0.75em;
 }
 
-/* 首页文章卡片标题和预览字体 */
-.recent-post-info .article-title {
-  font-size: 1.4rem !important;
-  font-weight: 600;
-  font-family: 'PingFang SC', 'Noto Serif SC', 'Microsoft YaHei', serif;
+.post-content table thead th {
+    background-color: rgba(73, 177, 245, 0.1);
 }
 
-.recent-post-info .content {
-  font-size: 1rem !important;
-  line-height: 1.8;
+/* 图片样式 */
+.post-content img {
+    max-width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 1.2em auto;
+    display: block;
 }
 
-/* 文章阅读更多按钮 */
-.article-more {
-  font-size: 0.95rem !important;
-  padding: 0.35em 0.8em !important;
+/* 首行缩进 */
+.post-content p:not(.gallery-group) {
+    text-indent: 2em;
+}
+
+/* 特殊段落不缩进 */
+.post-content blockquote p,
+.post-content li p,
+.post-content .gallery-group {
+    text-indent: 0;
 } 

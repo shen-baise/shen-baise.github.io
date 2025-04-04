@@ -35,39 +35,49 @@
 }
 
 /* 文章页H1-H6图标样式效果 */
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-    -webkit-animation: ccc 1.6s linear infinite;
-    animation: ccc 1.6s linear infinite;
+/* 控制风车转动速度 4s那里可以自己调节快慢 */
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  -webkit-animation: ccc 4s linear infinite;
+  animation: ccc 4s linear infinite;
 }
 
+/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */
 @-webkit-keyframes ccc {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-    to {
-        -webkit-transform: rotate(-1turn);
-        transform: rotate(-1turn)
-    }
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
 }
 
 @keyframes ccc {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
-    }
-    to {
-        -webkit-transform: rotate(-1turn);
-        transform: rotate(-1turn)
-    }
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
 }
 
 /* 设置风车颜色 */
-#article-container h1:before {
-    color: #ef50a8;
-    margin-left: -1.55rem;
-    font-size: 1.3rem;
-    margin-top: -0.23rem;
+#content-inner.layout h1::before,
+#article-container h1::before {
+  color: #ef50a8;
+  margin-left: -1.55rem;
+  font-size: 1.3rem;
+  margin-top: -0.23rem;
 }
 
 #content-inner.layout h2::before,
@@ -283,115 +293,4 @@ body {
 
 .recent-post-info .article-title:hover {
   color: #49b1f5;
-}
-
-/* 引入网络字体 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
-
-/* 设置全局字体 */
-:root {
-  --global-font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-  --code-font-family: "JetBrains Mono", Consolas, Monaco, 'Courier New', Courier, monospace;
-  --base-font-size: 16px;
-  --article-font-size: 1.1rem;
-  --heading-font-family: 'Noto Serif SC', 'PingFang SC', serif;
-}
-
-/* 全局字体设置 */
-body {
-  font-family: var(--global-font-family);
-  font-size: var(--base-font-size);
-  font-weight: 400;
-}
-
-/* 文章内容优化 */
-.post-content {
-  font-size: var(--article-font-size);
-  line-height: 2;
-  letter-spacing: 0.5px;
-}
-
-/* 美化文章段落间距和首行缩进 */
-.post-content p {
-  margin-bottom: 1.5em;
-  text-align: justify;
-  line-height: 2;
-}
-
-.post-content p:not(:empty) {
-  text-indent: 2em;
-}
-
-/* 代码块样式 */
-.post-content pre {
-  font-family: var(--code-font-family);
-  font-size: 0.9rem;
-  border-radius: 8px;
-}
-
-/* 标题字体设置 */
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  margin: 1.5em 0 1em;
-  letter-spacing: 0.5px;
-}
-
-/* 强制设置页面宽度，确保在大屏幕上阅读体验更好 */
-@media screen and (min-width: 1400px) {
-  .layout > .aside-content {
-    max-width: 320px !important;
-  }
-  
-  .layout > div:first-child:not(.aside-content) {
-    max-width: calc(100% - 320px) !important;
-  }
-  
-  #article-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-}
-
-/* 优化文章页面的阅读体验 */
-.post-content {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-}
-
-/* 段落首字放大效果 */
-.post-content > p:first-of-type::first-letter {
-  font-size: 1.8em;
-  font-weight: bold;
-  float: left;
-  margin-right: 0.15em;
-  line-height: 1;
-}
-
-/* 文章引用样式增强 */
-.post-content blockquote {
-  border-left: 4px solid #42b983;
-  background-color: rgba(66, 185, 131, 0.1);
-  padding: 1em 1em 1em 2em;
-  border-radius: 0 8px 8px 0;
-  position: relative;
-}
-
-.post-content blockquote::before {
-  content: """;
-  font-family: 'Noto Serif SC', serif;
-  position: absolute;
-  left: 0.5em;
-  top: 0;
-  font-size: 2.5em;
-  color: rgba(66, 185, 131, 0.5);
-  line-height: 1;
 } 
