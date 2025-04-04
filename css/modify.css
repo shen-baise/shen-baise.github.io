@@ -120,7 +120,7 @@ h6::before {
   margin-top: 0rem;
 }
 
-/* 设置风车hover动效 6s那里可以自己调节快慢*/
+/* s设置风车hover动效 6s那里可以自己调节快慢*/
 #content-inner.layout h1:hover,
 #content-inner.layout h2:hover,
 #content-inner.layout h3:hover,
@@ -149,8 +149,8 @@ h6::before {
 #article-container h5:hover::before,
 #article-container h6:hover::before {
   color: var(--theme-color);
-  -webkit-animation: ccc 6s linear infinite;
-  animation: ccc 6s linear infinite;
+  -webkit-animation: ccc 0.8s linear infinite;
+  animation: ccc 0.8s linear infinite;
 }
 
 /* 确保背景图片在所有页面完全显示 */
