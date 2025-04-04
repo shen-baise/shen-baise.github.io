@@ -1,3 +1,17 @@
+body {
+  background: url("/img/haer.jpg") !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+body.page.index {
+  background: url("/img/back.png") !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
 #page-header,
 #page-header:before {
   background-position: center !important;
