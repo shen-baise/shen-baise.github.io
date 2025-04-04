@@ -45,28 +45,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>欢迎来到深白色的赛博产房！<br>假如再也见不到你<br>祝你早安 午安 晚安</p><h2 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h2><p>本站使用 <a href="https://hexo.io/">Hexo</a> 搭建，主题为 <a href="https://butterfly.js.org/">Butterfly</a>。</p><p>如果您有任何问题或建议，欢迎联系我！</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>404 Not Found</title>
       <link href="/404.html"/>
       <url>/404.html</url>
@@ -111,11 +89,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/js/copy.js"/>
-      <url>/js/copy.js</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[document.addEventListener("copy", (function (e) {    toastr.options = {        /*关闭按钮是否开启 */          closeButton: false,          debug: false,          /*是否出现进度条 */        progressBar: true,         /*出现的位置，top与left可以进行更改  */         positionClass: "toast-top-left",          /*点击触发的函数，懂js的同学可以自行设置 */        onclick: null,          /**持续的实践，动画实践等等 */        showDuration: "300",          hideDuration: "300",          timeOut: "2500",          extendedTimeOut: "1000",        /**出现的方式 */          showEasing: "swing",          hideEasing: "linear",          showMethod: "fadeIn",          hideMethod: "fadeOut"      };    /**点击复制之后出现的文本，后面是标题 */    toastr.success("如果转载，请保留原文链接哦(●ˇ∀ˇ●)","复制成功！！！");  })); ]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>欢迎来到深白色的赛博产房！<br>假如再也见不到你<br>祝你早安 午安 晚安</p><h2 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h2><p>本站使用 <a href="https://hexo.io/">Hexo</a> 搭建，主题为 <a href="https://butterfly.js.org/">Butterfly</a>。</p><p>如果您有任何问题或建议，欢迎联系我！</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
       
     </entry>
     
@@ -134,21 +123,21 @@
     
     <entry>
       <title></title>
-      <link href="/js/welcome.js"/>
-      <url>/js/welcome.js</url>
+      <link href="/js/copy.js"/>
+      <url>/js/copy.js</url>
       
-        <content type="html"><![CDATA[// 欢迎弹窗功能document.addEventListener('DOMContentLoaded', function() {  // 检查是否已显示过欢迎弹窗  if (!localStorage.getItem('welcomeShown')) {    // 创建欢迎弹窗元素    const welcomePopup = document.createElement('div');    welcomePopup.id = 'welcome-popup';    welcomePopup.innerHTML = `      <h3>欢迎来到我的博客!</h3>      <p>感谢您访问我的个人空间，希望您能在这里找到有用的信息和愉快的阅读体验。</p>      <p>本站点持续更新中，如有任何建议，欢迎在留言板留言~</p>      <button id="welcome-close">我知道了</button>    `;        // 添加到页面中    document.body.appendChild(welcomePopup);        // 显示弹窗    setTimeout(() => {      welcomePopup.style.display = 'block';    }, 1000);        // 关闭按钮事件    document.getElementById('welcome-close').addEventListener('click', function() {      welcomePopup.style.display = 'none';            // 标记已显示过欢迎弹窗      localStorage.setItem('welcomeShown', 'true');    });        // 只在首页显示    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {      welcomePopup.style.display = 'none';    }  }  // 添加页面滚动特效  function addScrollAnimation() {    const postItems = document.querySelectorAll('.recent-post-item, .card-widget');        // 初始隐藏所有元素    postItems.forEach(item => {      item.style.opacity = '0';      item.style.transform = 'translateY(20px)';      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';    });        // 滚动时显示元素    function revealOnScroll() {      const windowHeight = window.innerHeight;      const revealPoint = 150;            postItems.forEach(item => {        const itemTop = item.getBoundingClientRect().top;        if (itemTop < windowHeight - revealPoint) {          item.style.opacity = '1';          item.style.transform = 'translateY(0)';        }      });    }        // 初始检查    revealOnScroll();        // 监听滚动事件    window.addEventListener('scroll', revealOnScroll);  }    // 启动滚动动画  addScrollAnimation();    // 添加鼠标悬停图片放大效果  const postCovers = document.querySelectorAll('.post-cover img');  postCovers.forEach(img => {    img.addEventListener('mouseenter', () => {      img.style.transform = 'scale(1.05)';      img.style.transition = 'transform 0.6s ease';    });        img.addEventListener('mouseleave', () => {      img.style.transform = 'scale(1)';    });  });}); ]]></content>
+        <content type="html"><![CDATA[document.addEventListener("copy", (function (e) {    toastr.options = {        /*关闭按钮是否开启 */          closeButton: false,          debug: false,          /*是否出现进度条 */        progressBar: true,         /*出现的位置，top与left可以进行更改  */         positionClass: "toast-top-left",          /*点击触发的函数，懂js的同学可以自行设置 */        onclick: null,          /**持续的实践，动画实践等等 */        showDuration: "300",          hideDuration: "300",          timeOut: "2500",          extendedTimeOut: "1000",        /**出现的方式 */          showEasing: "swing",          hideEasing: "linear",          showMethod: "fadeIn",          hideMethod: "fadeOut"      };    /**点击复制之后出现的文本，后面是标题 */    toastr.success("如果转载，请保留原文链接哦(●ˇ∀ˇ●)","复制成功！！！");  })); ]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title></title>
+      <link href="/js/welcome.js"/>
+      <url>/js/welcome.js</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+        <content type="html"><![CDATA[// 欢迎弹窗功能document.addEventListener('DOMContentLoaded', function() {  // 检查是否已显示过欢迎弹窗  if (!localStorage.getItem('welcomeShown')) {    // 创建欢迎弹窗元素    const welcomePopup = document.createElement('div');    welcomePopup.id = 'welcome-popup';    welcomePopup.innerHTML = `      <h3>欢迎来到我的博客!</h3>      <p>感谢您访问我的个人空间，希望您能在这里找到有用的信息和愉快的阅读体验。</p>      <p>本站点持续更新中，如有任何建议，欢迎在留言板留言~</p>      <button id="welcome-close">我知道了</button>    `;        // 添加到页面中    document.body.appendChild(welcomePopup);        // 显示弹窗    setTimeout(() => {      welcomePopup.style.display = 'block';    }, 1000);        // 关闭按钮事件    document.getElementById('welcome-close').addEventListener('click', function() {      welcomePopup.style.display = 'none';            // 标记已显示过欢迎弹窗      localStorage.setItem('welcomeShown', 'true');    });        // 只在首页显示    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {      welcomePopup.style.display = 'none';    }  }  // 添加页面滚动特效  function addScrollAnimation() {    const postItems = document.querySelectorAll('.recent-post-item, .card-widget');        // 初始隐藏所有元素    postItems.forEach(item => {      item.style.opacity = '0';      item.style.transform = 'translateY(20px)';      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';    });        // 滚动时显示元素    function revealOnScroll() {      const windowHeight = window.innerHeight;      const revealPoint = 150;            postItems.forEach(item => {        const itemTop = item.getBoundingClientRect().top;        if (itemTop < windowHeight - revealPoint) {          item.style.opacity = '1';          item.style.transform = 'translateY(0)';        }      });    }        // 初始检查    revealOnScroll();        // 监听滚动事件    window.addEventListener('scroll', revealOnScroll);  }    // 启动滚动动画  addScrollAnimation();    // 添加鼠标悬停图片放大效果  const postCovers = document.querySelectorAll('.post-cover img');  postCovers.forEach(img => {    img.addEventListener('mouseenter', () => {      img.style.transform = 'scale(1.05)';      img.style.transition = 'transform 0.6s ease';    });        img.addEventListener('mouseleave', () => {      img.style.transform = 'scale(1)';    });  });}); ]]></content>
       
     </entry>
     
@@ -166,11 +155,11 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/messageboard/index.html"/>
-      <url>/messageboard/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="欢迎来到留言板"><a href="#欢迎来到留言板" class="headerlink" title="欢迎来到留言板"></a>欢迎来到留言板</h2><p>这里是深白色的赛博产房留言板，欢迎在下方留言与我交流！</p><ul><li>分享你的想法</li><li>提出你的建议</li><li>留下你的足迹</li></ul><p>期待与你的互动~ </p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
       
     </entry>
     
