@@ -1,25 +1,31 @@
 // 欢迎弹窗功能
 document.addEventListener('DOMContentLoaded', function() {
-  // 创建欢迎弹窗
-  const welcomePopup = document.createElement('div');
-  welcomePopup.id = 'welcome-popup';
-  welcomePopup.innerHTML = `
-    <h3>欢迎来到深白色的赛博产房!</h3>
-    <p>感谢您的访问，希望您在这里能找到有趣的内容~</p>
-    <button id="welcome-close">开始探索</button>
-  `;
-
-  document.body.appendChild(welcomePopup);
-
-  // 显示欢迎弹窗
-  setTimeout(() => {
-    welcomePopup.style.display = 'block';
-  }, 1000);
-
-  // 关闭欢迎弹窗
-  document.getElementById('welcome-close').addEventListener('click', function() {
-    welcomePopup.style.display = 'none';
-  });
+  // 欢迎弹窗 - 只在首页显示且只显示一次
+  const isHomePage = document.body.classList.contains('page') && window.location.pathname === '/' || window.location.pathname === '/index.html';
+  
+  if (isHomePage && !localStorage.getItem('welcomeShown')) {
+    // 创建欢迎弹窗元素
+    const welcomePopup = document.createElement('div');
+    welcomePopup.id = 'welcome-popup';
+    welcomePopup.innerHTML = `
+      <h3>欢迎来到深白色的赛博产房!</h3>
+      <p>感谢您的访问，希望您在这里能找到有趣的内容~</p>
+      <button id="welcome-close">开始探索</button>
+    `;
+  
+    document.body.appendChild(welcomePopup);
+  
+    // 显示欢迎弹窗
+    setTimeout(() => {
+      welcomePopup.style.display = 'block';
+    }, 1000);
+  
+    // 关闭欢迎弹窗
+    document.getElementById('welcome-close').addEventListener('click', function() {
+      welcomePopup.style.display = 'none';
+      localStorage.setItem('welcomeShown', 'true');
+    });
+  }
 
   // 添加页面滚动特效
   function addScrollAnimation() {
