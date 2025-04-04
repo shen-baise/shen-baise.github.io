@@ -1,0 +1,55 @@
+/* 修复中文渲染问题 */
+body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* 增强字体清晰度 */
+* {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 中文字体优化 */
+:root {
+  --zh-font: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Noto Sans SC', sans-serif;
+  --zh-serif: 'Noto Serif SC', 'SimSun', serif;
+}
+
+body, html {
+  font-family: var(--zh-font);
+}
+
+/* 标题和正文字体分离 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--zh-serif);
+  font-weight: 600;
+}
+
+#article-container p, 
+.recent-post-info .content {
+  font-family: var(--zh-font);
+  font-weight: 400;
+}
+
+/* 确保字体粗细适中 */
+#article-container {
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.5px;
+}
+
+/* 修复字体间距 */
+p, li, td, th, blockquote {
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+
+/* 针对中文特殊修复 */
+.chinese-text {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+} 
