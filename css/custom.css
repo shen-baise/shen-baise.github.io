@@ -1,6 +1,7 @@
 /* 自定义鼠标光标 */
 body, html {
   cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/normal.cur), auto !important;
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a, button, input[type="submit"], select {
@@ -655,4 +656,110 @@ button.toast-close-button {
 
 #poem_author {
   font-weight: bold;
+}
+
+/* 文章内容排版美化 */
+#article-container {
+  font-size: 1.1rem;
+  line-height: 2;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+#article-container p {
+  margin-bottom: 1.2em;
+}
+
+#article-container h1, 
+#article-container h2, 
+#article-container h3, 
+#article-container h4, 
+#article-container h5, 
+#article-container h6 {
+  font-weight: 600;
+  margin: 1.5em 0 1em;
+  color: #2c3e50;
+  font-family: 'PingFang SC', 'Noto Serif SC', 'Microsoft YaHei', serif;
+}
+
+#article-container h1 {
+  font-size: 2rem;
+}
+
+#article-container h2 {
+  font-size: 1.8rem;
+}
+
+#article-container h3 {
+  font-size: 1.6rem;
+}
+
+#article-container h4 {
+  font-size: 1.4rem;
+}
+
+#article-container a {
+  color: #3273dc;
+  word-break: break-word;
+  text-decoration: none;
+  border-bottom: 1px solid #3273dc;
+  transition: all 0.3s;
+}
+
+#article-container a:hover {
+  color: #ff7242;
+  border-bottom: 1px solid #ff7242;
+}
+
+#article-container strong {
+  color: #273849;
+  font-weight: 600;
+}
+
+#article-container em {
+  font-style: italic;
+  color: #555;
+}
+
+#article-container ul, 
+#article-container ol {
+  padding-left: 2em;
+  margin-bottom: 1.2em;
+}
+
+#article-container ul li, 
+#article-container ol li {
+  margin-bottom: 0.5em;
+  line-height: 1.8;
+}
+
+#article-container blockquote {
+  border-left: 4px solid #49b1f5;
+  background-color: rgba(73, 177, 245, 0.1);
+  padding: 1em;
+  margin: 1em 0;
+  color: #555;
+  font-style: italic;
+}
+
+#article-container blockquote p {
+  margin: 0;
+}
+
+/* 首页文章卡片标题和预览字体 */
+.recent-post-info .article-title {
+  font-size: 1.4rem !important;
+  font-weight: 600;
+  font-family: 'PingFang SC', 'Noto Serif SC', 'Microsoft YaHei', serif;
+}
+
+.recent-post-info .content {
+  font-size: 1rem !important;
+  line-height: 1.8;
+}
+
+/* 文章阅读更多按钮 */
+.article-more {
+  font-size: 0.95rem !important;
+  padding: 0.35em 0.8em !important;
 } 
