@@ -160,8 +160,9 @@ h6::before {
 #page-header.archive-bg,
 #page-header.category-bg,
 #page-header.messageboard-bg,
-#page-header.comments-bg {
-  background: url('/img/haer.jpg') !important;
+#page-header.comments-bg,
+#page-header.about-bg {
+  background: url('/img/dog.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -177,31 +178,28 @@ body {
   background-repeat: no-repeat !important;
 }
 
-/* 主区域背景半透明处理 */
+/* 主区域背景处理 - 移除半透明和模糊效果 */
 #content-inner, 
 .layout, 
 .recent-post-item, 
 .card-widget {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: #ffffff !important;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
 }
 
-/* 文章目录半透明 */
+/* 文章目录样式 */
 #aside-content .card-widget {
-  background-color: rgba(255, 255, 255, 0.85) !important;
+  background-color: #ffffff !important;
 }
 
 /* 信笺样式留言板 */
 .comment-envelope-body {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(5px);
+  background-color: #ffffff !important;
 }
 
 .comment-barshow {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(5px);
+  background-color: #ffffff !important;
 }
 
 /* 美化留言板图片 */
@@ -229,7 +227,7 @@ body {
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
-  opacity: 0.7;
+  opacity: 1; /* 移除半透明效果 */
   z-index: -1;
-  filter: blur(3px);
+  filter: none; /* 移除模糊滤镜 */
 } 
