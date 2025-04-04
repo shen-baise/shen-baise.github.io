@@ -1,30 +1,37 @@
 // 欢迎弹窗功能
 document.addEventListener('DOMContentLoaded', function() {
-  // 欢迎弹窗 - 只在首页显示且只显示一次
-  const isHomePage = document.body.classList.contains('page') && window.location.pathname === '/' || window.location.pathname === '/index.html';
-  
-  if (isHomePage && !localStorage.getItem('welcomeShown')) {
+  // 检查是否已显示过欢迎弹窗
+  if (!localStorage.getItem('welcomeShown')) {
     // 创建欢迎弹窗元素
     const welcomePopup = document.createElement('div');
     welcomePopup.id = 'welcome-popup';
     welcomePopup.innerHTML = `
-      <h3>欢迎来到深白色的赛博产房!</h3>
-      <p>感谢您的访问，希望您在这里能找到有趣的内容~</p>
-      <button id="welcome-close">开始探索</button>
+      <h3>欢迎来到我的博客!</h3>
+      <p>感谢您访问我的个人空间，希望您能在这里找到有用的信息和愉快的阅读体验。</p>
+      <p>本站点持续更新中，如有任何建议，欢迎在留言板留言~</p>
+      <button id="welcome-close">我知道了</button>
     `;
-  
+    
+    // 添加到页面中
     document.body.appendChild(welcomePopup);
-  
-    // 显示欢迎弹窗
+    
+    // 显示弹窗
     setTimeout(() => {
       welcomePopup.style.display = 'block';
     }, 1000);
-  
-    // 关闭欢迎弹窗
+    
+    // 关闭按钮事件
     document.getElementById('welcome-close').addEventListener('click', function() {
       welcomePopup.style.display = 'none';
+      
+      // 标记已显示过欢迎弹窗
       localStorage.setItem('welcomeShown', 'true');
     });
+    
+    // 只在首页显示
+    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+      welcomePopup.style.display = 'none';
+    }
   }
 
   // 添加页面滚动特效
