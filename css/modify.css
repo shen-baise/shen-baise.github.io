@@ -12,40 +12,48 @@ body.page.index {
   background-size: cover !important;
   background-repeat: no-repeat !important;
 }
-#nav,
-.home-page #page-header,
-.page.index #page-header {
-  background-image: url("/img/back.png") !important;
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  height: 100vh !important;
-  z-index: 90 !important;
-}
-#site-info {
-  z-index: 91 !important;
-}
-.full-page.page.index {
-  height: 100vh !important;
-  position: relative !important;
-}
-.full-page.index .scroll-down-effects {
-  position: absolute !important;
-  bottom: 0 !important;
-  left: 50% !important;
-  -webkit-transform: translateX(-50%) !important;
-  -moz-transform: translateX(-50%) !important;
-  -o-transform: translateX(-50%) !important;
-  -ms-transform: translateX(-50%) !important;
-  transform: translateX(-50%) !important;
-  z-index: 100 !important;
-}
 #page-header {
   background-image: url("/img/lyy.webp") !important;
   background-position: center 40% !important;
   background-size: 100% auto !important;
   background-repeat: no-repeat !important;
   height: 500px !important;
+}
+body.page.index #page-header {
+  background-image: url("/img/back.png") !important;
+  height: 100vh !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+body.page.index #site-title,
+body.page.index #site-subtitle,
+body.page.index #site-info {
+  position: relative;
+  top: 10vh;
+  text-align: center;
+}
+body.page.index header {
+  height: 100vh;
+}
+body.page.index #content-inner {
+  margin-top: 0;
+  padding-top: 2rem;
+}
+.home-page #page-header {
+  height: 100vh !important;
+}
+.scroll-down-effects {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
 }
 #page-header.post-bg,
 #page-header.not-home-page {
@@ -113,7 +121,12 @@ canvas#ribbon,
 canvas#canvasNest {
   display: none !important;
 }
-.index #recent-posts,
-.index .pagination {
-  margin-top: 100vh !important;
+body.page.index .layout {
+  margin-top: 100vh;
+  background: #f7f9fe;
+  position: relative;
+  z-index: 10;
+  -webkit-box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+  border-radius: 12px 12px 0 0;
 }
