@@ -53,6 +53,9 @@ body {
 #recent-posts > .recent-post-item .post_cover img {
   transition: transform 0.6s;
   object-fit: cover;
+  height: 230px;
+  width: 100%;
+  object-position: center;
 }
 
 #recent-posts > .recent-post-item:hover .post_cover img {
