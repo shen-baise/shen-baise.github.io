@@ -159,10 +159,77 @@ h6::before {
 #page-header.tag-bg,
 #page-header.archive-bg,
 #page-header.category-bg,
-#page-header.messageboard-bg {
+#page-header.messageboard-bg,
+#page-header.comments-bg {
   background: url('/img/haer.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   height: 400px !important; /* 增加高度以确保图片完全显示 */
+}
+
+/* 主页背景优化 */
+body {
+  background: url('/img/haer.jpg') !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 主区域背景半透明处理 */
+#content-inner, 
+.layout, 
+.recent-post-item, 
+.card-widget {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* 文章目录半透明 */
+#aside-content .card-widget {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* 信笺样式留言板 */
+.comment-envelope-body {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(5px);
+}
+
+.comment-barshow {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(5px);
+}
+
+/* 美化留言板图片 */
+.comment-envelope-cover {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* 修复圈出区域背景 */
+#recent-posts, #aside-content, .article-sort {
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#recent-posts:before, #aside-content:before, .article-sort:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/img/haer.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  opacity: 0.7;
+  z-index: -1;
+  filter: blur(3px);
 } 
