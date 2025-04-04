@@ -9,27 +9,23 @@ a, button, input[type="submit"], select {
 
 /* 页面背景 */
 body {
-  background: url('/img/haer.jpg') fixed;
-  background-size: cover;
-  background-position: center;
+  background: url('/img/haer.jpg') fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 /* 确保所有页面使用相同背景图 */
-#page-header.not-home-page {
-  background: url('/img/haer.jpg') !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-
-/* 统一所有页面的banner图 */
+#page-header.not-home-page,
 #page-header.post-bg, 
 #page-header.tag-bg,
 #page-header.archive-bg,
 #page-header.category-bg,
-#page-header.not-home-page {
+#page-header.messageboard-bg {
   background: url('/img/haer.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
 /* 文章卡片美化 */
@@ -199,42 +195,48 @@ h6::before {
 }
 
 /* 设置风车颜色 */
-#content-inner.layout h1::before {
+#content-inner h1::before,
+#article-container h1::before {
   color: #ef50a8;
   margin-left: -1.55rem;
   font-size: 1.3rem;
   margin-top: -0.23rem;
 }
 
-#content-inner.layout h2::before {
+#content-inner h2::before,
+#article-container h2::before {
   color: #fb7061;
   margin-left: -1.35rem;
   font-size: 1.1rem;
   margin-top: -0.12rem;
 }
 
-#content-inner.layout h3::before {
+#content-inner h3::before,
+#article-container h3::before {
   color: #ffbf00;
   margin-left: -1.22rem;
   font-size: 0.95rem;
   margin-top: -0.09rem;
 }
 
-#content-inner.layout h4::before {
+#content-inner h4::before,
+#article-container h4::before {
   color: #a9e000;
   margin-left: -1.05rem;
   font-size: 0.8rem;
   margin-top: -0.09rem;
 }
 
-#content-inner.layout h5::before {
+#content-inner h5::before,
+#article-container h5::before {
   color: #57c850;
   margin-left: -0.9rem;
   font-size: 0.7rem;
   margin-top: 0rem;
 }
 
-#content-inner.layout h6::before {
+#content-inner h6::before,
+#article-container h6::before {
   color: #5ec1e0;
   margin-left: -0.9rem;
   font-size: 0.66rem;
@@ -242,21 +244,33 @@ h6::before {
 }
 
 /* 设置风车hover动效 6s那里可以自己调节快慢*/
-#content-inner.layout h1:hover,
-#content-inner.layout h2:hover,
-#content-inner.layout h3:hover,
-#content-inner.layout h4:hover,
-#content-inner.layout h5:hover,
-#content-inner.layout h6:hover {
+#content-inner h1:hover,
+#content-inner h2:hover,
+#content-inner h3:hover,
+#content-inner h4:hover,
+#content-inner h5:hover,
+#content-inner h6:hover,
+#article-container h1:hover,
+#article-container h2:hover,
+#article-container h3:hover,
+#article-container h4:hover,
+#article-container h5:hover,
+#article-container h6:hover {
   color: var(--theme-color);
 }
 
-#content-inner.layout h1:hover::before,
-#content-inner.layout h2:hover::before,
-#content-inner.layout h3:hover::before,
-#content-inner.layout h4:hover::before,
-#content-inner.layout h5:hover::before,
-#content-inner.layout h6:hover::before {
+#content-inner h1:hover::before,
+#content-inner h2:hover::before,
+#content-inner h3:hover::before,
+#content-inner h4:hover::before,
+#content-inner h5:hover::before,
+#content-inner h6:hover::before,
+#article-container h1:hover::before,
+#article-container h2:hover::before,
+#article-container h3:hover::before,
+#article-container h4:hover::before,
+#article-container h5:hover::before,
+#article-container h6:hover::before {
   color: var(--theme-color);
   -webkit-animation: ccc 6s linear infinite;
   animation: ccc 6s linear infinite;
