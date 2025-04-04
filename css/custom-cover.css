@@ -1,15 +1,6 @@
 /* 首页文章封面图片样式调整 */
-.recent-post-item {
-  display: flex !important;
-  flex-direction: column !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  border-radius: 12px !important;
-}
-
 .recent-post-item .post_cover {
-  width: 100% !important;
-  height: 280px !important;
+  height: 250px !important;
   margin: 0 !important;
   padding: 0 !important;
   border-radius: 12px 12px 0 0 !important;
@@ -17,48 +8,31 @@
 }
 
 .recent-post-item .post_cover img.post-bg {
-  width: 100% !important;
   height: 100% !important;
+  width: 100% !important;
   object-fit: cover !important;
   object-position: center !important;
   transform: none !important;
   transition: transform 0.6s !important;
-  border-radius: 12px 12px 0 0 !important;
 }
 
 .recent-post-item:hover .post_cover img.post-bg {
   transform: scale(1.05) !important;
 }
 
-.recent-post-item .recent-post-info {
-  padding: 16px 20px !important;
-  width: 100% !important;
-}
-
-/* 修复封面图显示样式 */
-#recent-posts > .recent-post-item {
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-#recent-posts > .recent-post-item .post_cover {
+/* 调整文章卡片的结构，确保封面图占满宽度 */
+.recent-post-item {
+  padding: 0 !important;
   overflow: hidden !important;
-  width: 100% !important;
-  height: 280px !important;
-  margin: 0 !important;
-  border-radius: 12px 12px 0 0 !important;
 }
 
-#recent-posts > .recent-post-item .post_cover img.post-bg {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+.recent-post-item .recent-post-info {
+  padding: 16px !important;
 }
 
 /* 处理没有封面图的情况 */
 .recent-post-item .recent-post-info.no-cover {
   padding: 16px !important;
-  width: 100% !important;
 }
 
 /* 文章页封面图样式调整 */
@@ -74,49 +48,13 @@
   object-position: center !important;
 }
 
-/* 针对不同的布局类型 */
-@media screen and (min-width: 769px) {
-  /* 针对index_layout: 6，即masonry布局 */
-  .masonry .recent-post-item {
-    margin-bottom: 20px !important;
-  }
-}
-
-/* 适配不同的屏幕大小 */
+/* 适配不同的布局 */
 @media screen and (max-width: 768px) {
-  .recent-post-item .post_cover,
-  #recent-posts > .recent-post-item .post_cover {
+  .recent-post-item .post_cover {
     height: 200px !important;
   }
   
   #post-info .post-cover {
     height: 250px !important;
   }
-}
-
-/* 禁用原有的封面图样式 */
-#recent-posts > .recent-post-item .post_cover {
-  margin: 0 !important;
-}
-
-/* 强制覆盖原主题样式 */
-.layout#recent-posts {
-  align-items: stretch !important;
-}
-
-.recent-posts.nc .recent-post-items {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
-  grid-gap: 20px !important;
-}
-
-.masonry .recent-post-items {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
-  grid-gap: 20px !important;
-}
-
-.recent-post-item {
-  width: 100% !important;
-  box-sizing: border-box !important;
 } 
