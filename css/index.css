@@ -6125,6 +6125,12 @@ figure.highlight pre .javascript .function {
 #waline-wrap .wl-comment-actions > button:not(last-child) {
   padding-right: 4px;
 }
+#vcomment textarea {
+  background: url("/img/lyy.webp") 100% 100% no-repeat;
+}
+#vcomment textarea:focus {
+  background-image: none;
+}
 .twikoo .tk-content p {
   margin: 3px 0;
 }
