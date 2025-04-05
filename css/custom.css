@@ -1,7 +1,51 @@
 /* 自定义鼠标光标 */
 body, html {
   cursor: url(https://cdn.jsdelivr.net/gh/SVGArtist/CursorLibrary/Yellow-Duck/normal.cur), auto !important;
-  font-size: 18px; /* 进一步增加基础字体大小 */
+  font-size: 16px; /* 调小基础字体大小 */
+  font-family: 'ZhuZiAWan2', '霞鹜文楷', '筑紫A丸by宁静之雨', serif;
+}
+
+/* 引入字体 */
+@font-face {
+  font-family: 'ZhuZiAWan2';
+  src: url('/PicGoDemo/fonts/ZhuZiAWan2.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '霞鹜文楷';
+  src: url('/PicGoDemo/fonts/霞鹜文楷.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: '筑紫A丸by宁静之雨';
+  src: url('/PicGoDemo/fonts/筑紫A丸by宁静之雨.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* 标题字体 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: '筑紫A丸by宁静之雨', 'ZhuZiAWan2', serif;
+  font-weight: 600;
+}
+
+/* 正文字体大小 */
+.article-container, #article-container, .card-widget, .recent-post-info {
+  font-size: 1rem;
+}
+
+/* 标题字体大小 */
+#article-container h1 {
+  font-size: 1.8rem;
+}
+
+#article-container h2 {
+  font-size: 1.6rem;
+}
+
+#article-container h3 {
+  font-size: 1.4rem;
 }
 
 a, button, input[type="submit"], select {

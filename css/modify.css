@@ -169,6 +169,19 @@ h6::before {
   height: 400px !important; /* 增加高度以确保图片完全显示 */
 }
 
+/* 为特定页面设置不同的背景 */
+#page-header.about-bg {
+  background: url('/img/dog.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+#page-header.link-bg {
+  background: url('/img/dog.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
 /* 主页背景优化 */
 body {
   background: url('/img/haer.jpg') !important;

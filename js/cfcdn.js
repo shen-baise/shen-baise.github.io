@@ -261,4 +261,33 @@ function showError(error) {
   // 设置默认位置（北京）
   localStorage.setItem("weather_lat", "39.9042");
   localStorage.setItem("weather_lon", "116.4074");
-} 
+}
+
+function fetchCDN() {
+  const cdnSpan = document.getElementById('cdn');
+  if (!cdnSpan) return;
+  
+  // 移除CDN检测，添加网站运行时间显示
+  const startDate = new Date('2023-01-01'); // 替换为你的网站创建日期
+  
+  function updateRuntime() {
+    const now = new Date();
+    const timeDiff = now - startDate;
+    
+    // 计算时间差
+    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    
+    // 更新显示
+    cdnSpan.innerHTML = 'Blog up for ' + days + ' days ' + hours + ' hours ' + minutes + ' mins';
+  }
+  
+  // 初始更新
+  updateRuntime();
+  
+  // 每分钟更新一次
+  setInterval(updateRuntime, 60000);
+}
+
+document.addEventListener('DOMContentLoaded', fetchCDN); 
