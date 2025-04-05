@@ -939,4 +939,27 @@ button.toast-close-button {
 /* 雪花黑夜模式不显示 */
 [data-theme="dark"] #snow{
   display: none;
+}
+
+/* Giscus评论系统样式 */
+.giscus {
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .giscus {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .giscus {
+  background-color: rgba(30, 30, 32, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.giscus-frame {
+  border: none !important;
+  width: 100% !important;
 } 
