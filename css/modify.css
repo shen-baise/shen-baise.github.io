@@ -32,26 +32,50 @@
 }
 
 @font-face {
-  font-family: 'MiSans';
-  src: url('/PicGoDemo/fonts/MiSans.woff2') format('woff2');
+  font-family: 'ZhuZiAYuan';
+  src: url('/PicGoDemo/fonts/ZhuZiAYuanJWD.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TangMeiRen';
+  src: url('/PicGoDemo/fonts/HYTangMeiRen55W.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTQHaoShenTi';
+  src: url('/PicGoDemo/fonts/甜甜圈海报字体.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZhuZiAWanRain';
+  src: url('/PicGoDemo/fonts/筑紫A丸by宁静之雨.woff2') format('woff2');
   font-display: swap;
 }
 
 /* 全局字体设置 */
 body {
-  font-family: 'XiaWuWenKai', 'MiSans', sans-serif !important;
+  font-family: 'XiaWuWenKai', 'ZhuZiAYuan', sans-serif !important;
   font-size: 16px;
 }
 
 /* 文章内容字体 */
 #article-container {
-  font-family: 'XiaWuWenKai', 'MiSans', sans-serif !important;
+  font-family: 'XiaWuWenKai', 'ZhuZiAYuan', sans-serif !important;
 }
 
 /* 标题字体 */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'ZhuZiAWan', 'XiaWuWenKai', sans-serif !important;
   font-weight: 600;
+}
+
+/* 左上角博客标题字体 */
+#nav .site-name, .nav-site-title .site-name {
+  font-family: 'ZhuZiAWanRain', 'TangMeiRen', sans-serif !important;
+  font-weight: bold;
 }
 
 /* 页面顶部图片 */
