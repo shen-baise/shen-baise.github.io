@@ -20,26 +20,14 @@
 
 /* 字体设置 */
 @font-face {
-  font-family: 'ZhuZiAWan';
-  src: url('/PicGoDemo/fonts/ZhuZiAWan2.woff2') format('woff2');
+  font-family: 'SourceCodePro';
+  src: url('/PicGoDemo/fonts/SourceCodePro.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'XiaWuWenKai';
-  src: url('/PicGoDemo/fonts/霞鹜文楷.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ZhuZiAYuan';
-  src: url('/PicGoDemo/fonts/ZhuZiAYuanJWD.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'TangMeiRen';
-  src: url('/PicGoDemo/fonts/HYTangMeiRen55W.woff2') format('woff2');
+  font-family: 'Consolas';
+  src: url('/PicGoDemo/fonts/Consolas.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -50,32 +38,37 @@
 }
 
 @font-face {
-  font-family: 'ZhuZiAWanRain';
-  src: url('/PicGoDemo/fonts/筑紫A丸by宁静之雨.woff2') format('woff2');
+  font-family: 'YouSheShenTi';
+  src: url('/PicGoDemo/fonts/优设好身体.woff2') format('woff2');
   font-display: swap;
 }
 
 /* 全局字体设置 */
 body {
-  font-family: 'XiaWuWenKai', 'ZhuZiAYuan', sans-serif !important;
+  font-family: 'TTQHaoShenTi', 'YouSheShenTi', sans-serif !important;
   font-size: 16px;
 }
 
 /* 文章内容字体 */
 #article-container {
-  font-family: 'XiaWuWenKai', 'ZhuZiAYuan', sans-serif !important;
+  font-family: 'YouSheShenTi', 'TTQHaoShenTi', sans-serif !important;
 }
 
 /* 标题字体 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'ZhuZiAWan', 'XiaWuWenKai', sans-serif !important;
+  font-family: 'YouSheShenTi', 'TTQHaoShenTi', sans-serif !important;
   font-weight: 600;
 }
 
 /* 左上角博客标题字体 */
 #nav .site-name, .nav-site-title .site-name {
-  font-family: 'ZhuZiAWanRain', 'TangMeiRen', sans-serif !important;
+  font-family: 'TTQHaoShenTi', 'YouSheShenTi', sans-serif !important;
   font-weight: bold;
+}
+
+/* 代码字体 */
+code, pre, .code-area {
+  font-family: 'SourceCodePro', 'Consolas', monospace !important;
 }
 
 /* 页面顶部图片 */
