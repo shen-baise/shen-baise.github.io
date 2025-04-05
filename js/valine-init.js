@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化 Valine
     new Valine({
       el: '#vcomments',
-      appId: 'bG1dEXLOsW2LOuO6upOQ7woZ-MdYXbMMI',
-      appKey: 'aSLbQwrdg1sKtStcw76WkBXQ',
-      serverURLs: 'https://bg1dexlo.api.lncldglobal.com',
-      placeholder: '欢迎留下你的评论！',
+      appId: 'wnkwX1IFdiXC2FA8BVJlOzp5-gzGzoHsz',
+      appKey: '7KYI9keQ3D2x8kWWEoMJ9Pkq',
+      serverURLs: 'https://wnkwx1if.lc-cn-n1-shared.com',
+      placeholder: '嘿，别忘了留下你的小脚印哦！',
       avatar: 'monsterid',
       meta: ['nick', 'mail', 'link'],
       pageSize: 10,
