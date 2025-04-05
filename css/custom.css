@@ -30,6 +30,24 @@ body, html {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'XiaWuWenKai';
+  src: url('/PicGoDemo/fonts/霞鹜文楷.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZhuZiAYuan';
+  src: url('/PicGoDemo/fonts/ZhuZiAYuanJWD.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TangMeiRen';
+  src: url('/PicGoDemo/fonts/HYTangMeiRen55W.woff2') format('woff2');
+  font-display: swap;
+}
+
 /* 标题字体 */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'YouSheShenTi', 'TTQHaoShenTi', serif;
@@ -751,7 +769,7 @@ button.toast-close-button {
 
 /* 文章正文样式美化 */
 .post-content {
-    font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
+    font-family: 'XiaWuWenKai', 'ZhuZiAYuan', 'TangMeiRen', serif !important;
     font-size: 1.3rem !important;
     line-height: 2.2 !important;
     letter-spacing: 0.02em;
@@ -772,7 +790,7 @@ button.toast-close-button {
 #article-container h4,
 #article-container h5,
 #article-container h6 {
-    font-family: 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-family: 'YouSheShenTi', 'TTQHaoShenTi', sans-serif;
     font-weight: 600;
     margin: 1.2em 0 0.8em 0;
     color: #444;

@@ -43,6 +43,24 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'XiaWuWenKai';
+  src: url('/PicGoDemo/fonts/霞鹜文楷.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZhuZiAYuan';
+  src: url('/PicGoDemo/fonts/ZhuZiAYuanJWD.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TangMeiRen';
+  src: url('/PicGoDemo/fonts/HYTangMeiRen55W.woff2') format('woff2');
+  font-display: swap;
+}
+
 /* 全局字体设置 */
 body {
   font-family: 'TTQHaoShenTi', 'YouSheShenTi', sans-serif !important;
@@ -51,7 +69,11 @@ body {
 
 /* 文章内容字体 */
 #article-container {
-  font-family: 'YouSheShenTi', 'TTQHaoShenTi', sans-serif !important;
+  font-family: 'XiaWuWenKai', 'ZhuZiAYuan', sans-serif !important;
+}
+
+.post-content {
+  font-family: 'XiaWuWenKai', 'ZhuZiAYuan', 'TangMeiRen', sans-serif !important;
 }
 
 /* 标题字体 */
