@@ -39,6 +39,7 @@ if (document.body.clientWidth > 992) {
                 color: "#6f42c1",
                 during: 500,
                 blog_body: "body",
+                nekoname: "neko1"  // 默认添加nekoname
             };
             var setting = $.extend(defaultSetting, option);
             var getThis = this.prop("className") !== "" ? "." + this.prop("className") : this.prop("id") !== "" ? "#" +
@@ -54,11 +55,11 @@ if (document.body.clientWidth > 992) {
                     'top': setting.top,
                     'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
                     'z-index': setting.z_index,
-                    'background-color': setting.bgcolor,
+                    'background-color': setting.bgcolor || 'rgb(0 0 0 / .5)',  // 提供默认背景色
                     "border-radius": setting.borderRadius,
                     'right': setting.right,
-                    'background-image': 'url(' + setting.scImg + ')',
-                    'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
+                    'background-image': setting.scImg ? 'url(' + setting.scImg + ')' : '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
+                    'border-radius': '2em',
                     'background-size': 'contain'
                 });
             $("#" + setting.nekoname)
@@ -68,6 +69,10 @@ if (document.body.clientWidth > 992) {
                     'z-index': setting.z_index * 10,
                     'right': setting.right,
                     'background-image': 'url(' + setting.nekoImg + ')',
+                    'width': '64px',         // 确保尺寸正确
+                    'height': '64px',        // 确保尺寸正确
+                    'background-repeat': 'no-repeat',  // 确保不重复
+                    'background-size': 'contain'       // 确保适合容器
                 });
             show(getBasicInfo());
             $(window)
@@ -81,11 +86,11 @@ if (document.body.clientWidth > 992) {
                             'top': setting.top,
                             'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
                             'z-index': setting.z_index,
-                            'background-color': setting.bgcolor,
+                            'background-color': setting.bgcolor || 'rgb(0 0 0 / .5)', // 提供默认背景色
                             "border-radius": setting.borderRadius,
                             'right': setting.right,
-                            'background-image': 'url(' + setting.scImg + ')',
-                            'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
+                            'background-image': setting.scImg ? 'url(' + setting.scImg + ')' : '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)',
+                            'border-radius': '2em',
                             'background-size': 'contain'
                         });
                     $("#" + setting.nekoname)
@@ -95,6 +100,10 @@ if (document.body.clientWidth > 992) {
                             'z-index': setting.z_index * 10,
                             'right': setting.right,
                             'background-image': 'url(' + setting.nekoImg + ')',
+                            'width': '64px',
+                            'height': '64px',
+                            'background-repeat': 'no-repeat',
+                            'background-size': 'contain'
                         });
                     if (basicInfo.ScrollTop == basicInfo.S_V) {
                         $("#" + setting.nekoname)
@@ -117,31 +126,18 @@ if (document.body.clientWidth > 992) {
         }
     })(jQuery);
 
-    $(document).ready(function () {
-        //部分自定义
-        $("#myscoll").nekoScroll({
-            bgcolor: 'rgb(0 0 0 / .5)', //背景颜色，没有绳子背景图片时有效
-            borderRadius: '2em',
-            zoom: 0.9
+    // 使用setTimeout确保在DOM和jQuery都准备好后执行
+    setTimeout(function() {
+        if ($("#myscoll").length > 0) {
+            $("#myscoll").nekoScroll({
+                bgcolor: 'rgb(0 0 0 / .5)', // 背景颜色，没有绳子背景图片时有效
+                borderRadius: '2em',
+                nekoname: 'neko1',
+                zoom: 0.9
+            });
+            console.log("小猫咪滚动条初始化成功");
+        } else {
+            console.log("找不到 #myscoll 元素，小猫咪滚动条初始化失败");
         }
-        );
-        //自定义（去掉以下注释，并注释掉其他的查看效果）
-        /*
-        $("#myscoll").nekoScroll({
-            nekoname:'neko1', //nekoname，相当于id
-            nekoImg:'img/猫咪.png', //neko的背景图片
-            scImg:"img/绳1.png", //绳子的背景图片
-            bgcolor:'#1e90ff', //背景颜色，没有绳子背景图片时有效
-            zoom:0.9, //绳子长度的缩放值
-            hoverMsg:'你好~喵', //鼠标浮动到neko上方的对话框信息
-            right:'100px', //距离页面右边的距离
-            fontFamily:'楷体', //对话框字体
-            fontSize:'14px', //对话框字体的大小
-            color:'#1e90ff', //对话框字体颜色
-            scroWidth:'8px', //绳子的宽度
-            z_index:100, //不用解释了吧
-            during:1200, //从顶部到底部滑动的时长
-        });
-        */
-    })
+    }, 1000);  // 延迟1秒确保DOM已完全加载
 } 

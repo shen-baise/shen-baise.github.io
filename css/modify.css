@@ -18,6 +18,42 @@
   color: var(--light-grey);
 }
 
+/* 字体设置 */
+@font-face {
+  font-family: 'ZhuZiAWan';
+  src: url('/PicGoDemo/fonts/ZhuZiAWan2.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'XiaWuWenKai';
+  src: url('/PicGoDemo/fonts/霞鹜文楷.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MiSans';
+  src: url('/PicGoDemo/fonts/MiSans.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* 全局字体设置 */
+body {
+  font-family: 'XiaWuWenKai', 'MiSans', sans-serif !important;
+  font-size: 16px;
+}
+
+/* 文章内容字体 */
+#article-container {
+  font-family: 'XiaWuWenKai', 'MiSans', sans-serif !important;
+}
+
+/* 标题字体 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ZhuZiAWan', 'XiaWuWenKai', sans-serif !important;
+  font-weight: 600;
+}
+
 /* 页面顶部图片 */
 .top-img {
   height: 250px;

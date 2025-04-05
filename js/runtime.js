@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!cdnSpan) return;
   
   // 网站创建时间
-  const startDate = new Date('2023-01-01'); // 替换为你的网站创建日期
+  const startDate = new Date('2004-04-20'); // 修改为从2004年4月20日开始计算
   
   function updateRuntime() {
     const now = new Date();

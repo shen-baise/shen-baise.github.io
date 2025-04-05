@@ -21,14 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
       serverURLs: 'https://wnkwx1if.lc-cn-n1-shared.com',
       placeholder: '嘿，别忘了留下你的小脚印哦！',
       avatar: 'monsterid',
-      meta: ['nick', 'mail', 'link'],
+      meta: ['nick', 'mail'],
       pageSize: 10,
       visitor: true,
       highlight: true,
-      recordIP: true,
+      recordIP: false,
       enableQQ: true,
       path: window.location.pathname
     });
+    
+    // 添加CSS以隐藏浏览器和系统信息
+    const style = document.createElement('style');
+    style.textContent = `
+      .vnick + .vsys { display: none !important; }
+      .vcomment-admin .vnick + .vsys { display: none !important; }
+    `;
+    document.head.appendChild(style);
     
     console.log('Valine 评论系统已初始化');
   });
