@@ -70,10 +70,15 @@ body {
 /* 文章内容字体 */
 #article-container {
   font-family: 'XiaWuWenKai', 'ZhuZiAYuan', sans-serif !important;
+  font-size: 1.2rem !important;
 }
 
 .post-content {
   font-family: 'XiaWuWenKai', 'ZhuZiAYuan', 'TangMeiRen', sans-serif !important;
+  font-size: 1.3rem !important;
+  line-height: 1.75 !important;
+  color: #333333;
+  text-align: justify;
 }
 
 /* 标题字体 */

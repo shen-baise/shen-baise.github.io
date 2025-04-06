@@ -61,15 +61,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 标题字体大小 */
 #article-container h1 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 
 #article-container h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 #article-container h3 {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 
 a, button, input[type="submit"], select {
@@ -785,15 +785,30 @@ button.toast-close-button {
   font-weight: bold;
 }
 
-/* 文章正文样式美化 */
+/* 文章内容字体大小 */
 .post-content {
-    font-family: 'XiaWuWenKai', 'ZhuZiAYuan', 'TangMeiRen', serif !important;
-    font-size: 1rem !important;
-    line-height: 2 !important;
-    letter-spacing: 0.02em;
-    color: #333;
-    text-align: justify;
-    font-weight: 400;
+  font-size: 1.3rem !important;
+  font-family: 'XiaWuWenKai', 'ZhuZiAYuan', 'TangMeiRen', sans-serif !important;
+  line-height: 1.75 !important;
+  color: #333333;
+  text-align: justify;
+  letter-spacing: 0.05em;
+}
+
+.post-content h1 {
+  font-size: 2.1rem !important;
+}
+
+.post-content h2 {
+  font-size: 1.9rem !important;
+}
+
+.post-content h3 {
+  font-size: 1.7rem !important;
+}
+
+.post-content h4 {
+  font-size: 1.5rem !important;
 }
 
 /* 文章段落间距 */
@@ -815,19 +830,19 @@ button.toast-close-button {
 }
 
 #article-container h1 {
-    font-size: 1.8rem !important;
+    font-size: 2.1rem !important;
 }
 
 #article-container h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.9rem !important;
 }
 
 #article-container h3 {
-    font-size: 1.4rem !important;
+    font-size: 1.7rem !important;
 }
 
 #article-container h4 {
-    font-size: 1.25rem !important;
+    font-size: 1.5rem !important;
 }
 
 /* 链接样式 */
@@ -912,58 +927,37 @@ button.toast-close-button {
 
 /* 全局字体大小调整 */
 #content-inner {
-  font-size: 1rem !important; /* 减小文章内容字体大小 */
+  font-size: 1.3rem !important; /* 增加文章内容字体大小 */
 }
 
 /* 文章标题字体大小 */
 .post-title {
-  font-size: 1.8rem !important;
-}
-
-/* 文章内容字体大小 */
-.post-content {
-  font-size: 1rem !important;
-}
-
-.post-content h1 {
-  font-size: 1.8rem !important;
-}
-
-.post-content h2 {
-  font-size: 1.6rem !important;
-}
-
-.post-content h3 {
-  font-size: 1.4rem !important;
-}
-
-.post-content h4 {
-  font-size: 1.25rem !important;
+  font-size: 2.1rem !important;
 }
 
 /* 侧边栏字体大小 */
 #aside-content .card-widget {
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
 }
 
 /* 导航菜单字体大小 */
 #nav .site-page {
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
 }
 
 /* 文章元数据字体大小 */
 .post-meta {
-  font-size: 0.95rem !important;
+  font-size: 1.1rem !important;
 }
 
 /* 文章卡片摘要字体大小 */
 .recent-post-info .content {
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
 }
 
 /* 卡片标题字体大小 */
 .card-widget .item-headline {
-  font-size: 1.2rem !important;
+  font-size: 1.35rem !important;
 }
 
 /* 雪花特效 */
@@ -1060,50 +1054,4 @@ button.toast-close-button {
   transform: translateY(-60px); /* 根据导航栏高度调整此值 */
 }
 
-/* 添加一个js代码到底部来控制导航栏的显示和隐藏 */
-
-/* 暗色模式下的文字颜色适配 */
-[data-theme="dark"] #recent-posts > .recent-post-item,
-[data-theme="dark"] #article-container,
-[data-theme="dark"] .card-widget,
-[data-theme="dark"] .recent-post-info,
-[data-theme="dark"] .post-content {
-  color: #ddd !important;
-}
-
-[data-theme="dark"] #recent-posts > .recent-post-item {
-  background: rgba(30, 30, 30, 0.9);
-}
-
-[data-theme="dark"] #aside-content .card-widget {
-  background: rgba(30, 30, 30, 0.9);
-  color: #ddd;
-}
-
-[data-theme="dark"] #article-container h1,
-[data-theme="dark"] #article-container h2,
-[data-theme="dark"] #article-container h3,
-[data-theme="dark"] #article-container h4,
-[data-theme="dark"] #article-container h5,
-[data-theme="dark"] #article-container h6 {
-  color: #eee;
-}
-
-/* 为hexo博客搭建-美化教程文章应用特殊字体 */
-article[data-path*="hexo博客搭建"] .post-content {
-  font-family: 'ZhuZiAWan2', 'ZhuZiAYuan', sans-serif !important;
-  letter-spacing: 0.03em;
-}
-
-/* 添加筑紫A丸字体 */
-@font-face {
-  font-family: 'ZhuZiAWan2';
-  src: url('/PicGoDemo/fonts/ZhuZiAWan2.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ZhuZiAWan';
-  src: url('/PicGoDemo/fonts/筑紫A丸by宁静之雨.woff2') format('woff2');
-  font-display: swap;
-} 
+/* 添加一个js代码到底部来控制导航栏的显示和隐藏 */ 
