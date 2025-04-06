@@ -398,57 +398,63 @@ body {
 /* 全局默认鼠标指针 */
 body,
 html {
-  cursor: url('/shubiao/normal.ani'), auto !important;
+  cursor: url('/shubiao/alternate1743925579.cur'), auto !important;
 }
 
 /* 悬停图片时的鼠标指针 */
 img {
-  cursor: url('/shubiao/move.ani'), auto !important;
+  cursor: url('/shubiao/alternate1743925579.cur'), auto !important;
 }
 
 /* 选择链接标签时的鼠标指针 */
 a:hover {
-  cursor: url('/shubiao/link.ani'), auto !important;
+  cursor: url('/shubiao/link1743925579.cur'), auto !important;
 }
 
 /* 选中输入框时的鼠标指针 */
 input:hover {
-  cursor: url('/shubiao/text.ani'), auto !important;
+  cursor: url('/shubiao/alternate1743925579.cur'), auto !important;
 }
 
 /* 悬停按钮时的鼠标指针 */
 button:hover {
-  cursor: url('/shubiao/link.ani'), auto !important;
+  cursor: url('/shubiao/link1743925579.cur'), auto !important;
 }
 
 /* 悬停列表标签时的鼠标指针 */
 i:hover {
-  cursor: url('/shubiao/link.ani'), auto !important;
+  cursor: url('/shubiao/link1743925579.cur'), auto !important;
 }
 
 /* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */
 #footer-wrap a:hover {
-  cursor: url('/shubiao/link.ani'), auto !important;
+  cursor: url('/shubiao/link1743925579.cur'), auto !important;
 }
 
 /* 悬停页码时的鼠标指针 */
 #pagination .page-number:hover {
-  cursor: url('/shubiao/link.ani'), auto !important;
+  cursor: url('/shubiao/link1743925579.cur'), auto !important;
 }
 
 /* 悬停菜单栏时的鼠标指针 */
 #nav .site-page:hover {
-  cursor: url('/shubiao/link.ani'), auto !important;
+  cursor: url('/shubiao/link1743925579.cur'), auto !important;
 }
 
 /* 忙碌状态鼠标指针 */
 .loading,
 .waiting {
-  cursor: url('/shubiao/busy.ani'), auto !important;
+  cursor: url('/shubiao/busy1743925579.cur'), auto !important;
 }
 
 /* 帮助状态鼠标指针 */
 .help-icon,
 .tooltip-trigger {
-  cursor: url('/shubiao/help.ani'), auto !important;
+  cursor: url('/shubiao/help1743925579.cur'), auto !important;
+}
+
+/* 工作中状态鼠标指针 */
+.processing,
+.submitting {
+  cursor: url('/shubiao/working1743925579.cur'), auto !important;
 } 
