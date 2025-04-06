@@ -963,4 +963,63 @@ button.toast-close-button {
 /* 雪花黑夜模式不显示 */
 [data-theme="dark"] #snow{
   display: none;
+}
+
+/* 引入自定义图标字体 */
+@font-face {
+  font-family: "iconfont";
+  src: url('../tubiao/iconfont.woff2?t=1743916188978') format('woff2'),
+       url('../tubiao/iconfont.woff?t=1743916188978') format('woff'),
+       url('../tubiao/iconfont.ttf?t=1743916188978') format('truetype');
+}
+
+.custom-icon {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 自定义图标代码 */
+.icon-qq:before {
+  content: "\e667";
+}
+
+.icon-home:before {
+  content: "\e601";
+}
+
+.icon-heart:before {
+  content: "\e741";
+}
+
+.icon-handshake:before {
+  content: "\e6b5";
+}
+
+.icon-comment:before {
+  content: "\e650";
+}
+
+.icon-search:before {
+  content: "\e600";
+}
+
+/* 美化导航栏图标 */
+#nav .site-page {
+  display: flex;
+  align-items: center;
+}
+
+#nav .site-page i {
+  margin-right: 4px;
+}
+
+/* 添加悬停效果 */
+.custom-icon {
+  transition: transform 0.3s ease;
+}
+
+.custom-icon:hover {
+  transform: scale(1.2);
 } 
