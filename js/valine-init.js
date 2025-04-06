@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const commentContainer = document.getElementById('post-comment');
     if (!commentContainer) return;
     
+    // 获取当前页面路径作为评论标识
+    const currentPath = window.location.pathname || '/';
+    console.log('当前页面路径:', currentPath);
+    
     // 寻找或创建 Valine 容器
     let valineContainer = document.getElementById('vcomments');
     if (!valineContainer) {
@@ -14,55 +18,85 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 初始化 Valine
-    new Valine({
+    const valine = new Valine({
       el: '#vcomments',
       appId: 'wnkwX1IFdiXC2FA8BVJlOzp5-gzGzoHsz',
       appKey: '7KYI9keQ3D2x8kWWEoMJ9Pkq',
       serverURLs: 'https://wnkwx1if.lc-cn-n1-shared.com',
       placeholder: '嘿，别忘了留下你的小脚印哦！',
       avatar: 'monsterid',
-      meta: ['nick', 'mail'],
+      meta: ['nick', 'mail', 'link'],
       pageSize: 10,
       visitor: true,
       highlight: true,
-      recordIP: true,  // 记录IP地址以便更好管理
+      recordIP: true,
       enableQQ: true,
-      // 设置管理员邮箱，管理员可以删除任何评论
-      master: 'shenbaise19@gmail.com',  // 你的邮箱地址
-      // 管理员昵称，可选
-      masterTag: '博主',
-      // 确保每个页面有独立的评论区
-      path: window.location.pathname,
-      // 添加管理员标识
-      tagMeta: ['博主', '小伙伴', '访客'],
+      // 管理员设置
+      admin: 'shenbaise19@gmail.com', // 管理员邮箱
+      adminLabel: '博主', // 管理员标签
+      // 强制使用当前页面路径
+      path: currentPath,
+      // 添加评论者标签
+      tagMeta: ['博主', '小伙伴', '访客']
     });
     
-    // 添加CSS以美化界面
+    // 添加自定义样式
     const style = document.createElement('style');
     style.textContent = `
+      /* 隐藏浏览器信息 */
       .vnick + .vsys { display: none !important; }
-      .vcomment-admin .vnick + .vsys { display: block !important; color: #ff7242; }
-      .vtag.master { background-color: #49b1f5 !important; color: #fff !important; }
-      .vat { color: #49b1f5 !important; }
-      .vcards .vcard .vh .vmeta .vat { color: #ef8b56 !important; }
-      .vcards .vcard .vhead .vnick { color: #ef8b56; }
       
-      /* 管理员删除按钮样式 */
-      .vdelete {
-        display: none;  /* 默认隐藏删除按钮 */
-        margin-left: 8px;
-        color: #f56c6c;
-        cursor: pointer;
+      /* 管理员标识样式 */
+      .vat { color: #49b1f5 !important; }
+      .vcards .vcard .vh .vmeta .vat { color: #ff7242 !important; }
+      
+      /* 管理员标签样式 */
+      .vcard .vhead .vnick.admin-nick { 
+        color: #ff7242 !important;
+        font-weight: bold;
+      }
+      .vcard .vhead .admin-tag {
+        display: inline-block;
+        background-color: #49b1f5;
+        color: white;
+        font-size: 0.75em;
+        padding: 0 5px;
+        margin-left: 5px;
+        border-radius: 3px;
       }
       
-      /* 管理员可见的删除按钮 */
-      .vtag.master ~ .vdelete,
-      .vcomment-admin .vdelete {
-        display: inline-block !important;
+      /* 删除按钮样式 */
+      .v[data-class="v"] .vcard .vhead .vdelete {
+        color: #f56c6c !important;
       }
     `;
     document.head.appendChild(style);
     
-    console.log('Valine 评论系统已初始化，管理员功能已启用');
+    // 添加功能增强脚本
+    setTimeout(() => {
+      // 标记管理员评论
+      const comments = document.querySelectorAll('.vcard');
+      comments.forEach(comment => {
+        const nickElement = comment.querySelector('.vnick');
+        const mailElement = comment.querySelector('.vmail');
+        
+        if (nickElement && mailElement) {
+          const mail = mailElement.getAttribute('d-mail');
+          if (mail === 'shenbaise19@gmail.com') {
+            nickElement.classList.add('admin-nick');
+            
+            // 添加管理员标签
+            const adminTag = document.createElement('span');
+            adminTag.className = 'admin-tag';
+            adminTag.textContent = '博主';
+            nickElement.parentNode.insertBefore(adminTag, nickElement.nextSibling);
+          }
+        }
+      });
+      
+      console.log('评论区样式和功能增强已应用');
+    }, 1000);
+    
+    console.log('Valine 评论系统已初始化，当前页面评论路径:', currentPath);
   });
 }); 
