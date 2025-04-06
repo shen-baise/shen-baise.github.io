@@ -25,19 +25,44 @@ document.addEventListener('DOMContentLoaded', function() {
       pageSize: 10,
       visitor: true,
       highlight: true,
-      recordIP: false,
+      recordIP: true,  // 记录IP地址以便更好管理
       enableQQ: true,
-      path: window.location.pathname
+      // 设置管理员邮箱，管理员可以删除任何评论
+      master: 'shenbaise19@gmail.com',  // 你的邮箱地址
+      // 管理员昵称，可选
+      masterTag: '博主',
+      // 确保每个页面有独立的评论区
+      path: window.location.pathname,
+      // 添加管理员标识
+      tagMeta: ['博主', '小伙伴', '访客'],
     });
     
-    // 添加CSS以隐藏浏览器和系统信息
+    // 添加CSS以美化界面
     const style = document.createElement('style');
     style.textContent = `
       .vnick + .vsys { display: none !important; }
-      .vcomment-admin .vnick + .vsys { display: none !important; }
+      .vcomment-admin .vnick + .vsys { display: block !important; color: #ff7242; }
+      .vtag.master { background-color: #49b1f5 !important; color: #fff !important; }
+      .vat { color: #49b1f5 !important; }
+      .vcards .vcard .vh .vmeta .vat { color: #ef8b56 !important; }
+      .vcards .vcard .vhead .vnick { color: #ef8b56; }
+      
+      /* 管理员删除按钮样式 */
+      .vdelete {
+        display: none;  /* 默认隐藏删除按钮 */
+        margin-left: 8px;
+        color: #f56c6c;
+        cursor: pointer;
+      }
+      
+      /* 管理员可见的删除按钮 */
+      .vtag.master ~ .vdelete,
+      .vcomment-admin .vdelete {
+        display: inline-block !important;
+      }
     `;
     document.head.appendChild(style);
     
-    console.log('Valine 评论系统已初始化');
+    console.log('Valine 评论系统已初始化，管理员功能已启用');
   });
 }); 
