@@ -5518,6 +5518,24 @@ figure.highlight pre .javascript .function {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+.fontawesomeIcon,
+.container.post-content h1:before,
+.container.post-content h2:before,
+.container.post-content h3:before,
+.container.post-content h4:before,
+.container.post-content h5:before,
+.container.post-content h6:before,
+.container.post-content hr:before,
+#post .post-copyright:before,
+#post #post-outdate-notice:before,
+.note:not(.no-icon)::before,
+.search-dialog hr:before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
 .container {
   word-wrap: break-word;
   overflow-wrap: break-word;
