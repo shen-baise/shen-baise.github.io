@@ -1054,4 +1054,10 @@ button.toast-close-button {
   transform: translateY(-60px); /* 根据导航栏高度调整此值 */
 }
 
-/* 添加一个js代码到底部来控制导航栏的显示和隐藏 */ 
+/* 添加一个js代码到底部来控制导航栏的显示和隐藏 */
+
+/* 信息卡片彩带 */
+.author_top:hover {
+  background: url(https://tuchuang.voooe.cn/images/2023/01/02/snow.gif);
+  background-size: cover;
+} 
