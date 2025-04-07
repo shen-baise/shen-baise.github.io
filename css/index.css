@@ -5518,6 +5518,14 @@ figure.highlight pre .javascript .function {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+.custom-hr,
+.container.post-content hr,
+.search-dialog hr {
+  margin: 20px 0;
+  height: 1px;
+  background: var(--hr-color);
+  border: none;
+}
 .fontawesomeIcon,
 .container.post-content h1:before,
 .container.post-content h2:before,
