@@ -1054,4 +1054,48 @@ button.toast-close-button {
   transform: translateY(-60px); /* 根据导航栏高度调整此值 */
 }
 
-/* 添加一个js代码到底部来控制导航栏的显示和隐藏 */ 
+/* 添加一个js代码到底部来控制导航栏的显示和隐藏 */
+
+/* 评论区样式增强 */
+.vcontent img.vemoji {
+  display: inline-block !important;
+  height: 1.5em !important;
+  width: auto !important;
+  margin: 0 1px !important;
+  vertical-align: middle !important;
+}
+
+/* 表情图片样式 */
+.vemoji {
+  max-width: none !important;
+  max-height: 1.5em !important;
+  vertical-align: middle !important;
+}
+
+/* 修复评论中的图片显示 */
+.vcontent img {
+  display: inline-block;
+  max-height: 300px;
+}
+
+/* 确保 class="vemoji" 的图片正确显示 */
+img[class="vemoji"] {
+  display: inline-block !important;
+  height: 1.5em !important;
+  width: auto !important;
+  margin: 0 1px !important;
+  vertical-align: middle !important;
+}
+
+/* Valine 评论框样式美化 */
+#vcomments .vcards .vcard {
+  padding: 15px 20px 0 20px !important;
+  border-radius: 10px !important;
+  margin-bottom: 15px !important;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1) !important;
+  transition: all 0.3s !important;
+}
+
+#vcomments .vcards .vcard:hover {
+  box-shadow: 0 0 8px rgba(0,0,0,0.2) !important;
+} 

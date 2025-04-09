@@ -50,9 +50,6 @@
           return false;
         }
         
-        // 自动过滤评论内容中的XSS风险代码
-        textareaEl.value = filterXSS(commentText);
-        
         // 继续原始提交流程
         if (typeof originalSubmitEvent === 'function') {
           return originalSubmitEvent.call(this, e);
@@ -99,12 +96,11 @@
     function containsSensitiveWords(text) {
       if (!text) return false;
       
-      // 定义敏感词列表 (可根据需求扩展)
+      // 定义敏感词列表 (移除政治相关词汇，保留明显的侮辱性词汇)
       const sensitiveWords = [
-        '习近平', '毛泽东', '政府', '共产党', '法轮功',
-        '赌博', '博彩', '色情', '暴力',
-        '婊子', '傻逼', '操你', '妈的', '垃圾', '废物',
-        'fuck', 'shit', 'bitch', 'dick', 'pussy'
+        '赌博', '博彩', 
+        '操你', '妈的',
+        'fuck', 'shit', 'bitch'
       ];
       
       // 转换为小写进行检查
@@ -120,25 +116,37 @@
       return false;
     }
     
-    // 过滤XSS风险代码
-    function filterXSS(text) {
-      if (!text) return '';
+    // 监听评论加载完成
+    const checkCommentsLoaded = setInterval(function() {
+      const commentsList = document.querySelector('.vcards');
+      if (commentsList && commentsList.children.length > 0) {
+        clearInterval(checkCommentsLoaded);
+        allowNormalContent();
+      }
+    }, 1000);
+    
+    // 允许表情和正常内容显示
+    function allowNormalContent() {
+      // 查找所有评论内容
+      const comments = document.querySelectorAll('.vcontent');
       
-      // 基本HTML实体转义
-      let filtered = text
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#x27;')
-        .replace(/\//g, '&#x2F;');
-      
-      // 替换可能的恶意代码模式
-      filtered = filtered
-        .replace(/javascript:/gi, 'javascript：')
-        .replace(/on\w+\s*=/gi, 'data-disabled-event=');
-      
-      return filtered;
+      comments.forEach(function(comment) {
+        // 恢复图片表情显示
+        let content = comment.innerHTML;
+        
+        // 允许图片标签显示
+        content = content.replace(/&lt;img/g, '<img')
+                        .replace(/&gt;/g, '>')
+                        .replace(/&amp;/g, '&')
+                        .replace(/data-disabled-event=/g, 'alt=');
+        
+        // 确保图片标签中的属性正确显示
+        content = content.replace(/src=&quot;([^&]*)&quot;/g, 'src="$1"')
+                        .replace(/alt=&quot;([^&]*)&quot;/g, 'alt="$1"')
+                        .replace(/class=&quot;([^&]*)&quot;/g, 'class="$1"');
+        
+        comment.innerHTML = content;
+      });
     }
     
     // 显示警告提示

@@ -17,24 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
       commentContainer.appendChild(valineContainer);
     }
 
-    // 创建XSS过滤函数
-    function xssFilter(content) {
+    // 创建安全的HTML过滤函数
+    function safeHtmlFilter(content) {
       if (!content) return '';
       
-      // 创建一个安全的HTML过滤器
+      // 只过滤危险的脚本标签和事件处理器
       return content
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#x27;')
-        .replace(/\//g, '&#x2F;')
-        .replace(/`/g, '&#x60;')
-        .replace(/(script|iframe|onerror|onload|onclick|onmouseover)/gi, function(match) {
-          return match.replace(/[a-zA-Z]/g, function(c) {
-            return '&#' + c.charCodeAt(0) + ';';
-          });
-        });
+        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+        .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+        .replace(/javascript:/gi, 'javascript:void(0);')
+        .replace(/onerror\s*=\s*/gi, 'data-blocked=')
+        .replace(/onclick\s*=\s*/gi, 'data-blocked=')
+        .replace(/onload\s*=\s*/gi, 'data-blocked=')
+        .replace(/onmouseover\s*=\s*/gi, 'data-blocked=');
     }
 
     // 初始化 Valine
@@ -64,11 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dangerousPatterns = [
           /<script/i, 
           /<iframe/i, 
-          /javascript:/i, 
-          /onerror=/i, 
-          /onclick=/i, 
-          /onload=/i, 
-          /onmouseover=/i,
+          /javascript:/i,
           /alert\(/i,
           /document\.cookie/i
         ];
@@ -76,15 +67,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // 检查评论是否包含危险内容
         for (const pattern of dangerousPatterns) {
           if (pattern.test(comment)) {
-            console.warn('检测到可能的XSS攻击，评论已被拦截');
-            // 可以选择直接拒绝，或者转义后接受
-            // return false; // 拒绝评论
-            return xssFilter(comment); // 转义后接受
+            console.warn('检测到可能的XSS攻击，危险代码已被过滤');
+            return safeHtmlFilter(comment);
           }
         }
         
-        // 所有评论都应该经过最基本的HTML转义
-        return xssFilter(comment);
+        // 允许正常HTML和表情内容通过
+        return comment;
       }
     });
     
@@ -117,18 +106,36 @@ document.addEventListener('DOMContentLoaded', function() {
       .v[data-class="v"] .vcard .vhead .vdelete {
         color: #f56c6c !important;
       }
+      
+      /* 表情样式修复 */
+      .vcontent img.vemoji {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        height: 1.5em;
+        margin: 0 1px;
+      }
     `;
     document.head.appendChild(style);
     
-    // 处理现有评论中的可能XSS内容
-    function sanitizeExistingComments() {
-      const commentContents = document.querySelectorAll('.vcontent');
-      commentContents.forEach(content => {
-        // 使用innerHTML获取原始内容，然后使用textContent设置纯文本内容
-        // 这会去除所有HTML标签，避免XSS执行
-        const originalText = content.innerHTML;
-        content.textContent = originalText;
-      });
+    // 修复已有评论中的表情图片
+    function fixExistingComments() {
+      setTimeout(function() {
+        const commentContents = document.querySelectorAll('.vcontent');
+        commentContents.forEach(content => {
+          let html = content.innerHTML;
+          
+          // 修复可能被转义的图片标签
+          html = html.replace(/&lt;img/g, '<img')
+                     .replace(/&gt;/g, '>')
+                     .replace(/&amp;/g, '&')
+                     .replace(/src=&quot;([^&]*)&quot;/g, 'src="$1"')
+                     .replace(/alt=&quot;([^&]*)&quot;/g, 'alt="$1"')
+                     .replace(/class=&quot;([^&]*)&quot;/g, 'class="$1"');
+                     
+          content.innerHTML = html;
+        });
+      }, 800);
     }
     
     // 添加功能增强脚本
@@ -153,10 +160,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      // 清理现有评论中的XSS
-      sanitizeExistingComments();
+      // 修复现有评论中的表情
+      fixExistingComments();
       
-      console.log('评论区样式和功能增强已应用，XSS防护已启用');
+      console.log('评论区样式和功能增强已应用');
     }, 1000);
     
     // 监听DOM变化，处理新加载的评论
@@ -166,11 +173,20 @@ document.addEventListener('DOMContentLoaded', function() {
           // 检查新添加的节点是否包含评论
           mutation.addedNodes.forEach(function(node) {
             if (node.classList && node.classList.contains('vcard')) {
-              // 找到新评论的内容区域并净化
+              // 找到新评论的内容区域并修复表情
               const contentArea = node.querySelector('.vcontent');
               if (contentArea) {
-                const originalText = contentArea.innerHTML;
-                contentArea.textContent = originalText;
+                let html = contentArea.innerHTML;
+                
+                // 修复可能被转义的图片标签
+                html = html.replace(/&lt;img/g, '<img')
+                           .replace(/&gt;/g, '>')
+                           .replace(/&amp;/g, '&')
+                           .replace(/src=&quot;([^&]*)&quot;/g, 'src="$1"')
+                           .replace(/alt=&quot;([^&]*)&quot;/g, 'alt="$1"')
+                           .replace(/class=&quot;([^&]*)&quot;/g, 'class="$1"');
+                           
+                contentArea.innerHTML = html;
               }
             }
           });
