@@ -5,7 +5,7 @@ if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobi
 
     window && (() => {
         let e = {
-            flakeCount: 100, // 雪花数目
+            flakeCount: 200, // 雪花数目
             minDist: 150,   // 最小距离
             color: "255, 255, 255", // 雪花颜色
             size: 2,  // 雪花大小
