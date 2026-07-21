@@ -5,23 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Personal homepage of Jie Liu, Computer Science undergraduate at Sun Yat-sen University."
+      content="Personal homepage of Jie Liu, an undergraduate student at the School of Cyber Science and Technology, Sun Yat-sen University."
     >
     <title>Jie Liu</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Jie Liu, home">JL</a>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="mailto:liuj869@mail2.sysu.edu.cn">Contact</a>
+      </nav>
+    </header>
+
     <main class="page">
-      <section class="intro" aria-labelledby="name">
-        <p class="eyebrow">Computer Science Undergraduate</p>
-        <h1 id="name">Jie Liu</h1>
-        <p class="lead">
-          I am a Computer Science undergraduate at Sun Yat-sen University.
-        </p>
+      <section class="intro" id="top" aria-labelledby="name">
+        <div class="intro-copy">
+          <p class="eyebrow">Undergraduate Researcher</p>
+          <h1 id="name">Jie Liu</h1>
+          <p class="lead">
+            I am an undergraduate student at the School of Cyber Science and
+            Technology, Sun Yat-sen University.
+          </p>
+
+          <div class="actions">
+            <a class="primary-link" href="mailto:liuj869@mail2.sysu.edu.cn">Email me</a>
+            <a href="https://github.com/shen-baise">View GitHub</a>
+          </div>
+        </div>
+
+        <div class="profile-mark" aria-hidden="true">
+          <span>JL</span>
+          <small>SYSU</small>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-heading">
+        <div class="section-heading">
+          <p class="section-number">01</p>
+          <h2 id="about-heading">About</h2>
+        </div>
 
         <dl class="details">
           <div>
-            <dt>Affiliation</dt>
+            <dt>School</dt>
+            <dd>School of Cyber Science and Technology</dd>
+          </div>
+          <div>
+            <dt>University</dt>
             <dd>Sun Yat-sen University</dd>
           </div>
           <div>
@@ -43,15 +76,31 @@
         </dl>
       </section>
 
-      <section class="section" aria-labelledby="research">
-        <h2 id="research">Research Interests</h2>
-        <ul class="tags" aria-label="Research interests">
-          <li>Large Language Models</li>
-          <li>Model Merging</li>
-          <li>Agents</li>
-          <li>Retrieval-Augmented Generation</li>
-        </ul>
+      <section class="section research" id="research" aria-labelledby="research-heading">
+        <div class="section-heading">
+          <p class="section-number">02</p>
+          <h2 id="research-heading">Research Interests</h2>
+        </div>
+
+        <div class="research-content">
+          <p>
+            I am interested in building capable and adaptable AI systems, with
+            a focus on large language models and methods that help them combine
+            knowledge, use external information, and act effectively.
+          </p>
+          <ul class="tags" aria-label="Research interests">
+            <li>Large Language Models</li>
+            <li>Model Merging</li>
+            <li>AI Agents</li>
+            <li>Retrieval-Augmented Generation</li>
+          </ul>
+        </div>
       </section>
     </main>
+
+    <footer>
+      <p>Jie Liu <span aria-hidden="true">/</span> Shenzhen, China</p>
+      <a href="#top">Back to top</a>
+    </footer>
   </body>
 </html>

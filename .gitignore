@@ -1,0 +1,26 @@
+# Local agent configuration
+.agents/
+.claude/
+skills-lock.json
+
+# Jekyll and static-site build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
