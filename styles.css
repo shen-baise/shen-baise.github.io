@@ -27,12 +27,11 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
 
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 82px; border-bottom: 1px solid var(--line); }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-size: .91rem; font-weight: 750; text-decoration: none; }
-.brand-mark { display: grid; width: 33px; height: 33px; place-items: center; border: 1px solid var(--sky-strong); border-radius: 11px; background: var(--white); color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: .78rem; }
+.brand-mark { display: grid; width: 33px; height: 33px; place-items: center; border: 1px solid var(--sky-strong); border-radius: 11px; background: var(--white); font-size: .95rem; }
 nav { display: flex; gap: 28px; }
 nav a, .site-footer a { color: var(--muted); font-size: .78rem; font-weight: 650; text-decoration: none; }
 nav a:hover, .site-footer a:hover { color: var(--blue); }
-.status { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .7rem; }
-.status i { width: 7px; height: 7px; border-radius: 50%; background: #9ed9ad; }
+.welcome { color: var(--muted); font-size: .7rem; font-style: italic; }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 400px); gap: 76px; align-items: center; padding: 88px 7% 104px; }
 .hero-copy { min-width: 0; }
@@ -73,6 +72,15 @@ h1 em, h2 em { color: var(--blue); font-style: italic; }
 h2 { max-width: 720px; margin-bottom: 24px; font-size: 51px; line-height: 1.1; }
 .large-copy { max-width: 680px; margin-bottom: 25px; color: var(--muted); font-size: 1rem; }
 .aside-note { display: inline-block; margin: 4px 0 0; padding: 10px 14px; border-left: 2px solid #edb9ce; background: var(--pink-wash); color: #927d86; font-size: .72rem; font-style: italic; }
+.education-list { border-top: 1px solid var(--line); }
+.education-item { display: grid; grid-template-columns: 145px minmax(0, 1fr) 25px; gap: 22px; align-items: start; padding: 22px 0; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding 180ms ease, background 180ms ease; }
+.education-item:hover { padding-right: 12px; padding-left: 12px; background: rgba(255,255,255,.6); }
+.education-years { color: var(--blue); font-size: .72rem; font-weight: 750; }
+.education-detail { display: grid; gap: 4px; }
+.education-detail strong { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; font-weight: 400; }
+.education-detail small { color: var(--muted); font-size: .78rem; }
+.education-arrow { color: var(--blue); font-size: 1rem; text-align: right; }
+.education-note { margin: 18px 0 0; color: #9a7e89; font-size: .73rem; font-style: italic; }
 .research-intro { max-width: 660px; margin-bottom: 27px; color: var(--muted); font-size: .95rem; }
 .research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .research-card { position: relative; min-height: 205px; padding: 19px; border: 1px solid transparent; border-radius: 15px; transition: transform 180ms ease, box-shadow 180ms ease; }
@@ -100,7 +108,7 @@ h2 { max-width: 720px; margin-bottom: 24px; font-size: 51px; line-height: 1.1; }
   .site-header { min-height: 72px; gap: 12px; }
   nav { gap: 14px; }
   nav a { font-size: .68rem; }
-  .status { display: none; }
+  .welcome { display: none; }
   .hero { grid-template-columns: 1fr; gap: 49px; padding: 64px 2px 74px; }
   h1 { font-size: 58px; }
   .hero-summary { max-width: 38ch; }
@@ -108,6 +116,10 @@ h2 { max-width: 720px; margin-bottom: 24px; font-size: 51px; line-height: 1.1; }
   .orbit-note { right: -24px; }
   .quick-facts { grid-template-columns: 1fr; gap: 14px; padding: 20px 4px; }
   .content-section { grid-template-columns: 1fr; gap: 24px; padding: 75px 2px; }
+  .education-item { grid-template-columns: 1fr 22px; gap: 8px; }
+  .education-years { grid-column: 1 / -1; }
+  .education-detail { grid-column: 1; }
+  .education-arrow { grid-column: 2; grid-row: 2; }
   h2 { font-size: 42px; }
   .contact-section { grid-template-columns: 1fr; gap: 32px; margin-top: 48px; padding: 38px 22px; }
   .contact-section h2 { font-size: 39px; }
